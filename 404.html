@@ -82,19 +82,7 @@
       <p>এটা একটি স্বাধীন অনুবাদ; EFF এটি তৈরি বা অনুমোদন করেনি।</p>
     </footer>
   </div>
-  <script>
-    const themeToggle = document.querySelector(".theme-toggle");
-    themeToggle.addEventListener("click", () => {
-      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-      document.documentElement.dataset.theme = nextTheme;
-      localStorage.setItem("theme", nextTheme);
-      themeToggle.setAttribute(
-        "aria-label",
-        nextTheme === "dark" ? "লাইট থিম চালু করুন" : "ডার্ক থিম চালু করুন"
-      );
-      themeToggle.setAttribute("title", nextTheme === "dark" ? "লাইট থিম" : "ডার্ক থিম");
-    });
-  </script>
+  <script src="/assets/main.js"></script>
 </body>
 
 </html>

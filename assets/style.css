@@ -553,16 +553,99 @@ article blockquote {
 
 /* Glossary terms — dotted underline on technical terms */
 .glossary-term {
-  border-bottom: 1.5px dotted var(--muted);
+  position: relative;
+  display: inline;
+  border-bottom: 1.5px dotted var(--accent);
   color: inherit;
   text-decoration: none;
   cursor: help;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  border-radius: 2px;
 }
 
-.glossary-term:hover {
-  border-bottom-color: var(--accent);
+.glossary-term:hover,
+.glossary-term:focus-visible,
+.glossary-term.active {
+  border-bottom: 1.5px solid var(--accent);
   color: var(--accent);
-  text-decoration: none;
+  background-color: var(--accent-soft);
+  outline: none;
+}
+
+/* Floating custom tooltip popover */
+.glossary-tooltip {
+  position: absolute;
+  z-index: 1000;
+  max-width: 320px;
+  min-width: 180px;
+  padding: 0.7rem 0.95rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  font-weight: normal;
+  font-style: normal;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+  pointer-events: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px) scale(0.98);
+  transition: opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1), transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.18s ease;
+}
+
+.glossary-tooltip.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.glossary-tooltip::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  transform: rotate(45deg);
+}
+
+.glossary-tooltip[data-placement="top"]::before {
+  bottom: -6px;
+  left: calc(var(--arrow-offset, 50%) - 5px);
+  border-top: none;
+  border-left: none;
+}
+
+.glossary-tooltip[data-placement="bottom"]::before {
+  top: -6px;
+  left: calc(var(--arrow-offset, 50%) - 5px);
+  border-bottom: none;
+  border-right: none;
+}
+
+.glossary-tooltip-header {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.02em;
+}
+
+.glossary-tooltip-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.glossary-tooltip-body {
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.55;
 }
 
 .disclaimer {

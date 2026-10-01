@@ -60,7 +60,7 @@
         <p class="review-meta"><strong>সর্বশেষ পর্যালোচনা:</strong> ৮ মে, ২০২৫</p>
         <blockquote>
           <p><strong>লাইসেন্স ও অ্যাট্রিবিউশন নোট</strong></p>
-          <p>এই লেখাটি Electronic Frontier Foundation (EFF)-এর Surveillance Self-Defense (SSD) প্রকল্পের &quot;How to:
+          <p>এই লেখাটি Electronic Frontier Foundation (EFF)-এর Surveillance Self-Defense প্রকল্পের &quot;How to:
             Delete Your Computer&#39;s Data Securely&quot; নিবন্ধের একটি বাংলা অনুবাদ। মূল নিবন্ধ: <a
               href="https://ssd.eff.org/module/how-to-delete-your-computers-data-securely">https://ssd.eff.org/module/how-to-delete-your-computers-data-securely</a>
           </p>
@@ -317,24 +317,7 @@
       <p>এটা একটি স্বাধীন অনুবাদ; EFF এটি তৈরি বা অনুমোদন করেনি।</p>
     </footer>
   </div>
-  <script>
-    const themeToggle = document.querySelector(".theme-toggle");
-    themeToggle.addEventListener("click", () => {
-      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-      document.documentElement.dataset.theme = nextTheme;
-      localStorage.setItem("theme", nextTheme);
-      themeToggle.setAttribute("aria-label", nextTheme === "dark" ? "লাইট থিম চালু করুন" : "ডার্ক থিম চালু করুন");
-      themeToggle.setAttribute("title", nextTheme === "dark" ? "লাইট থিম" : "ডার্ক থিম");
-    });
-
-    document.querySelectorAll(".heading-anchor").forEach(anchor => {
-      anchor.addEventListener("click", () => {
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(window.location.origin + window.location.pathname + anchor.getAttribute("href")).catch(() => {});
-        }
-      });
-    });
-  </script>
+  <script src="/assets/main.js"></script>
 </body>
 
 </html>
