@@ -28,6 +28,31 @@
 - access — অ্যাক্সেস
 - recovery — পুনরুদ্ধার
 - suspicious — সন্দেহজনক
+- adversary — প্রতিপক্ষ
+- phishing — ফিশিং
+- spearphishing — স্পিয়ারফিশিং
+- credential harvesting — ক্রেডেনশিয়াল হারভেস্টিং (লগইন তথ্য হাতিয়ে নেওয়া)
+- malware — ম্যালওয়্যার
+- vulnerability — নিরাপত্তা দুর্বলতা
+- bug — বাগ
+- address bar — অ্যাড্রেস বার
+- domain / domain name — ডোমেইন / ডোমেইন নাম
+- URL shortener — URL শর্টনার
+- lookalike letters — দেখতে একই রকম অক্ষর
+- return address — ফেরত-ঠিকানা (রিটার্ন অ্যাড্রেস)
+- auto-fill — অটো-ফিল
+- external images — বহিরাগত ছবি
+- sender — প্রেরক
+- recipient — প্রাপক
+- solid-state drive (SSD) — সলিড-স্টেট ড্রাইভ (SSD)
+- spinning disk drive — ঘূর্ণায়মান ডিস্ক ড্রাইভ
+- secure deletion — নিরাপদে ডেটা মোছা
+- overwrite — ওভাররাইট
+- wear leveling — ওয়্যার লেভেলিং
+- garbage collection — গার্বেজ কালেকশন
+- master key — মাস্টার কি
+- shred — শ্রেড (টুকরো টুকরো করা)
+- forensic recovery — ফরেনসিক উদ্ধার
 
 ## অনুবাদ নীতি
 

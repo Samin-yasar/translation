@@ -6,7 +6,7 @@
 > এই লেখাটি Electronic Frontier Foundation (EFF)-এর Surveillance Self-Defense (SSD) প্রকল্পের "How to: Avoid Phishing Attacks" নিবন্ধের একটি বাংলা অনুবাদ। মূল নিবন্ধ: <https://ssd.eff.org/module/how-avoid-phishing-attacks>
 > মূল লেখাটি [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) লাইসেন্সের অধীনে প্রকাশিত। এই অনুবাদও একই লাইসেন্সের অধীনে প্রকাশিত।
 > অনুবাদ করা হয়েছে মূল ইংরেজি লেখা থেকে; এতে পরিবর্তন (ভাষান্তর) করা হয়েছে। এই অনুবাদ EFF কর্তৃক অনুমোদিত বা সমর্থিত নয়।
-> অনুবাদক: সামিন ইয়াসার · অনুবাদের তারিখ: ০১ অক্টোবর, ২০২৬*
+> অনুবাদক: সামিন ইয়াসার · অনুবাদের তারিখ: ০১ অক্টোবর, ২০২৬
 
 ---
 
