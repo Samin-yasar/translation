@@ -173,15 +173,313 @@ function initGlossaryTooltips() {
   });
 }
 
+// Local In-Browser Search Engine (Scoped to SSD)
+function initSearch() {
+  const isSSD = window.location.pathname.startsWith("/ssd") || window.location.pathname === "/";
+  if (!isSSD) return;
+
+  const headerActions = document.querySelector(".header-actions");
+  if (!headerActions) return;
+
+  // Insert search trigger button if not already in HTML
+  let searchTrigger = headerActions.querySelector(".search-trigger");
+  if (!searchTrigger) {
+    searchTrigger = document.createElement("button");
+    searchTrigger.className = "search-trigger";
+    searchTrigger.type = "button";
+    searchTrigger.setAttribute("aria-label", "অনুসন্ধান করুন (⌘K)");
+    searchTrigger.setAttribute("title", "অনুসন্ধান করুন (⌘K)");
+    searchTrigger.innerHTML = `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.35-4.35" />
+      </svg>
+      <span class="search-trigger-text">খুঁজুন</span>
+      <span class="search-hint"><kbd>⌘</kbd><kbd>K</kbd></span>
+    `;
+    // Insert before theme toggle
+    const themeToggle = headerActions.querySelector(".theme-toggle");
+    if (themeToggle) {
+      headerActions.insertBefore(searchTrigger, themeToggle);
+    } else {
+      headerActions.appendChild(searchTrigger);
+    }
+  }
+
+  // Create Modal DOM
+  let backdrop = document.querySelector(".search-modal-backdrop");
+  if (!backdrop) {
+    backdrop = document.createElement("div");
+    backdrop.className = "search-modal-backdrop";
+    backdrop.setAttribute("role", "dialog");
+    backdrop.setAttribute("aria-modal", "true");
+    backdrop.setAttribute("aria-label", "গাইড ও শব্দভাণ্ডার অনুসন্ধান");
+    backdrop.innerHTML = `
+      <div class="search-modal">
+        <div class="search-input-wrapper">
+          <svg class="search-input-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input class="search-input" type="search" placeholder="গাইড, পরিভাষা বা বিষয় খুঁজুন..." aria-label="খুঁজুন" autocomplete="off" spellcheck="false">
+          <button class="search-close-btn" type="button" aria-label="বন্ধ করুন">ESC</button>
+        </div>
+        <ul class="search-results" role="listbox">
+          <li class="search-empty">কীওয়ার্ড লিখে খুঁজুন (যেমন: লকডাউন, ফিশিং, BleachBit, এয়ারট্যাগ)</li>
+        </ul>
+        <div class="search-footer">
+          <span class="search-footer-info">SSD বাংলা অনুবাদ সংগ্রহ</span>
+          <div class="search-footer-shortcuts">
+            <span><kbd>↑</kbd> <kbd>↓</kbd> নির্বাচন</span>
+            <span><kbd>↵</kbd> প্রবেশ</span>
+            <span><kbd>ESC</kbd> বন্ধ</span>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(backdrop);
+  }
+
+  const input = backdrop.querySelector(".search-input");
+  const resultsContainer = backdrop.querySelector(".search-results");
+  const closeBtn = backdrop.querySelector(".search-close-btn");
+
+  let searchIndex = null;
+  let isLoading = false;
+  let selectedIndex = -1;
+
+  async function loadIndex() {
+    if (searchIndex || isLoading) return;
+    isLoading = true;
+    try {
+      const res = await fetch("/ssd/search-index.json");
+      if (res.ok) {
+        searchIndex = await res.json();
+      }
+    } catch (err) {
+      console.error("Failed to load search index:", err);
+    } finally {
+      isLoading = false;
+    }
+  }
+
+  function openModal() {
+    backdrop.classList.add("open");
+    loadIndex();
+    setTimeout(() => input.focus(), 50);
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    backdrop.classList.remove("open");
+    input.value = "";
+    resultsContainer.innerHTML = `<li class="search-empty">কীওয়ার্ড লিখে খুঁজুন (যেমন: লকডাউন, ফিশিং, BleachBit, এয়ারট্যাগ)</li>`;
+    selectedIndex = -1;
+    document.body.style.overflow = "";
+  }
+
+  function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function highlight(text, queryTokens) {
+    if (!text) return "";
+    let highlighted = text;
+    queryTokens.forEach(token => {
+      if (!token) return;
+      const regex = new RegExp(`(${escapeRegExp(token)})`, "gi");
+      highlighted = highlighted.replace(regex, "<mark>$1</mark>");
+    });
+    return highlighted;
+  }
+
+  function performSearch(query) {
+    const raw = query.trim();
+    if (!raw) {
+      resultsContainer.innerHTML = `<li class="search-empty">কীওয়ার্ড লিখে খুঁজুন (যেমন: লকডাউন, ফিশিং, BleachBit, এয়ারট্যাগ)</li>`;
+      selectedIndex = -1;
+      return;
+    }
+
+    if (!searchIndex) {
+      resultsContainer.innerHTML = `<li class="search-empty">ইনডেক্স লোড হচ্ছে...</li>`;
+      return;
+    }
+
+    const tokens = raw.toLowerCase().split(/\s+/).filter(Boolean);
+
+    const matches = [];
+
+    for (const item of searchIndex) {
+      let score = 0;
+      const titleLower = (item.title || "").toLowerCase();
+      const subLower = (item.subtitle || "").toLowerCase();
+      const summaryLower = (item.summary || "").toLowerCase();
+      const keywordsStr = (item.keywords || []).join(" ").toLowerCase();
+      const tagsStr = (item.tags || []).join(" ").toLowerCase();
+
+      let allMatched = true;
+
+      for (const token of tokens) {
+        let tokenScore = 0;
+
+        if (titleLower.includes(token)) {
+          tokenScore += (titleLower.startsWith(token) ? 80 : 50);
+        }
+        if (subLower.includes(token)) {
+          tokenScore += 40;
+        }
+        if (keywordsStr.includes(token)) {
+          tokenScore += 35;
+        }
+        if (tagsStr.includes(token)) {
+          tokenScore += 30;
+        }
+        if (summaryLower.includes(token)) {
+          tokenScore += 20;
+        }
+
+        if (tokenScore === 0) {
+          allMatched = false;
+          break;
+        }
+        score += tokenScore;
+      }
+
+      if (allMatched && score > 0) {
+        // Boost guide over section slightly
+        if (item.type === "guide") score += 15;
+        if (item.type === "glossary") score += 10;
+        matches.push({ item, score });
+      }
+    }
+
+    matches.sort((a, b) => b.score - a.score);
+    const topResults = matches.slice(0, 15);
+
+    if (topResults.length === 0) {
+      resultsContainer.innerHTML = `<li class="search-empty">"${raw}"-এর সাথে মেলে এমন কোনো ফলাফল পাওয়া যায়নি।</li>`;
+      selectedIndex = -1;
+      return;
+    }
+
+    const badgeLabels = {
+      guide: "গাইড",
+      section: "অনুচ্ছেদ",
+      glossary: "শব্দার্থ"
+    };
+
+    resultsContainer.innerHTML = topResults.map(({ item }, index) => {
+      const badgeText = badgeLabels[item.type] || item.type;
+      const parentLabel = item.parentTitle ? `<span class="search-item-parent">${item.parentTitle}</span>` : "";
+      const highlightedTitle = highlight(item.title, tokens);
+      const highlightedSub = highlight(item.subtitle, tokens);
+      const highlightedSummary = highlight(item.summary, tokens);
+
+      return `
+        <li>
+          <a class="search-item" href="${item.url}" data-index="${index}" role="option">
+            <div class="search-item-header">
+              <span class="search-badge search-badge-${item.type}">${badgeText}</span>
+              <span class="search-item-title">${highlightedTitle}</span>
+              ${parentLabel}
+            </div>
+            ${item.subtitle ? `<div class="search-item-subtitle">${highlightedSub}</div>` : ""}
+            ${item.summary ? `<div class="search-item-summary">${highlightedSummary}</div>` : ""}
+          </a>
+        </li>
+      `;
+    }).join("");
+
+    selectedIndex = 0;
+    updateSelection();
+  }
+
+  function updateSelection() {
+    const items = resultsContainer.querySelectorAll(".search-item");
+    items.forEach((item, idx) => {
+      if (idx === selectedIndex) {
+        item.classList.add("selected");
+        item.scrollIntoView({ block: "nearest" });
+      } else {
+        item.classList.remove("selected");
+      }
+    });
+  }
+
+  // Event Listeners
+  searchTrigger.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+
+  backdrop.addEventListener("click", (e) => {
+    if (e.target === backdrop) closeModal();
+  });
+
+  input.addEventListener("input", (e) => {
+    performSearch(e.target.value);
+  });
+
+  // Global Keyboard Shortcuts
+  document.addEventListener("keydown", (e) => {
+    // ⌘K or Ctrl+K
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      if (backdrop.classList.contains("open")) {
+        closeModal();
+      } else {
+        openModal();
+      }
+      return;
+    }
+
+    // Slash key '/' when not in input/textarea
+    if (e.key === "/" && !["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) {
+      e.preventDefault();
+      openModal();
+      return;
+    }
+
+    if (!backdrop.classList.contains("open")) return;
+
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closeModal();
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      const items = resultsContainer.querySelectorAll(".search-item");
+      if (items.length) {
+        selectedIndex = (selectedIndex + 1) % items.length;
+        updateSelection();
+      }
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      const items = resultsContainer.querySelectorAll(".search-item");
+      if (items.length) {
+        selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+        updateSelection();
+      }
+    } else if (e.key === "Enter") {
+      const selected = resultsContainer.querySelector(".search-item.selected");
+      if (selected) {
+        e.preventDefault();
+        selected.click();
+      }
+    }
+  });
+}
+
 // Run on load
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => {
     initTheme();
     initAnchors();
     initGlossaryTooltips();
+    initSearch();
   });
 } else {
   initTheme();
   initAnchors();
   initGlossaryTooltips();
+  initSearch();
 }
+

@@ -1,0 +1,364 @@
+[
+  {
+    "id": "guide:how-avoid-phishing-attacks",
+    "type": "guide",
+    "title": "কীভাবে ফিশিং আক্রমণ এড়াবেন",
+    "subtitle": "How to: Avoid Phishing Attacks",
+    "url": "/ssd/how-avoid-phishing-attacks/",
+    "keywords": ["ফিশিং", "phishing", "ইমেল", "ইমেইল", "ই-মেইল", "স্পিয়ারফিশিং", "spearphishing", "ক্রেডেনশিয়াল", "লগইন", "পাসওয়ার্ড", "ভুয়া লিংক", "সন্দেহজনক", "ডোমেইন", "লুকঅ্যালাইক"],
+    "summary": "ফিশিং ও স্পিয়ারফিশিং আক্রমণের কৌশল, সন্দেহজনক বার্তা ও ভুয়া লিংক চেনার উপায় এবং সুরক্ষার সর্বোত্তম পন্থা।",
+    "tags": ["phishing", "email", "security", "passwords", "scam"]
+  },
+  {
+    "id": "section:how-avoid-phishing-attacks:types",
+    "type": "section",
+    "title": "ফিশিং আক্রমণের ধরন",
+    "subtitle": "Types of Phishing Attacks",
+    "parentTitle": "কীভাবে ফিশিং আক্রমণ এড়াবেন",
+    "url": "/ssd/how-avoid-phishing-attacks/#types-of-phishing-attacks",
+    "keywords": ["ফিশিং আক্রমণের ধরন", "স্পিয়ারফিশিং", "সাধারণ ফিশিং", "ক্রেডেনশিয়াল হারভেস্টিং", "ম্যালওয়্যার আক্রমণ"],
+    "summary": "সাধারণ ফিশিং, নিশানাভিত্তিক স্পিয়ারফিশিং এবং ম্যালওয়্যার অ্যাটাচমেন্টের মাধ্যমে সংক্রমণের বিভিন্ন ধরন।",
+    "tags": ["phishing", "threats"]
+  },
+  {
+    "id": "section:how-avoid-phishing-attacks:defend",
+    "type": "section",
+    "title": "ফিশিং আক্রমণের বিরুদ্ধে কীভাবে প্রতিরক্ষা গড়বেন",
+    "subtitle": "How to Defend Against Phishing Attacks",
+    "parentTitle": "কীভাবে ফিশিং আক্রমণ এড়াবেন",
+    "url": "/ssd/how-avoid-phishing-attacks/#how-to-defend-against-phishing-attacks",
+    "keywords": ["প্রতিরক্ষা", "পাসওয়ার্ড ম্যানেজার", "টু-ফ্যাক্টর অথেনটিকেশন", "2FA", "ইউআরএল যাচাই", "অ্যান্ড্রয়েড", "আইওএস", "ব্রাউজার"],
+    "summary": "পাসওয়ার্ড ম্যানেজার ব্যবহার, টু-ফ্যাক্টর অথেনটিকেশন (2FA) এবং লিংক ও প্রেরকের ফেরত-ঠিকানা যাচাই করার পদক্ষেপ।",
+    "tags": ["phishing", "defense", "2fa"]
+  },
+  {
+    "id": "guide:how-to-delete-your-computers-data-securely",
+    "type": "guide",
+    "title": "কীভাবে আপনার কম্পিউটারের ডেটা নিরাপদে মুছবেন",
+    "subtitle": "How to: Delete Your Computer's Data Securely",
+    "url": "/ssd/how-to-delete-your-computers-data-securely/",
+    "keywords": ["ডেটা মোছা", "secure deletion", "BleachBit", "SSD", "সলিড স্টেট ডিস্ক", "হার্ড ড্রাইভ", "শ্রেড", "shred", "ওভাররাইট", "ফাইল মুছা", "ফরেনসিক উদ্ধার", "FileVault", "BitLocker"],
+    "summary": "কম্পিউটার, SSD ও ইউএসবি ড্রাইভ থেকে ফাইল স্থায়ীভাবে ও নিরাপদে মুছে ফেলার নিয়ম এবং BleachBit টুলের ব্যবহার।",
+    "tags": ["data-deletion", "bleachbit", "ssd", "privacy", "storage"]
+  },
+  {
+    "id": "section:how-to-delete-your-computers-data-securely:ssd-usb",
+    "type": "section",
+    "title": "সলিড-স্টেট ডিস্ক (SSD), ইউএসবি ফ্ল্যাশ ড্রাইভ ও এসডি কার্ডে নিরাপদে ডেটা মোছা",
+    "subtitle": "SSD, USB Flash Drive & SD Card Secure Deletion",
+    "parentTitle": "কীভাবে আপনার কম্পিউটারের ডেটা নিরাপদে মুছবেন",
+    "url": "/ssd/how-to-delete-your-computers-data-securely/#ssd-usb-secure-deletion",
+    "keywords": ["SSD", "USB", "SD card", "ওয়্যার লেভেলিং", "গার্বেজ কালেকশন", "ফুল ডিস্ক এনক্রিপশন", "FileVault", "BitLocker"],
+    "summary": "SSD এবং ফ্ল্যাশ ড্রাইভে ওয়্যার লেভেলিং ও গার্বেজ কালেকশনের কারণে নিরাপদ ডিলিটের সীমাবদ্ধতা ও এনক্রিপশনের গুরুত্ব।",
+    "tags": ["ssd", "encryption"]
+  },
+  {
+    "id": "section:how-to-delete-your-computers-data-securely:bleachbit",
+    "type": "section",
+    "title": "ফাইল মুছতে BleachBit ব্যবহারের নিয়ম",
+    "subtitle": "BleachBit Guide",
+    "parentTitle": "কীভাবে আপনার কম্পিউটারের ডেটা নিরাপদে মুছবেন",
+    "url": "/ssd/how-to-delete-your-computers-data-securely/#bleachbit-guide",
+    "keywords": ["BleachBit", "Windows", "Linux", "শ্রেডিং", "shred files", "ফ্রি স্পেস ওয়াইপ"],
+    "summary": "Windows ও Linux-এ ওপেন সোর্স BleachBit ইনস্টল করে ফাইল ও ফোল্ডার সম্পূর্ণ অপাঠযোগ্য করে মুছে ফেলার নিয়ম।",
+    "tags": ["bleachbit", "tools"]
+  },
+  {
+    "id": "section:how-to-delete-your-computers-data-securely:discarding",
+    "type": "section",
+    "title": "পুরোনো হার্ডওয়্যার ফেলে দেওয়ার সময় নিরাপদে ডেটা মোছা",
+    "subtitle": "Discarding Old Hardware",
+    "parentTitle": "কীভাবে আপনার কম্পিউটারের ডেটা নিরাপদে মুছবেন",
+    "url": "/ssd/how-to-delete-your-computers-data-securely/#discarding-old-hardware",
+    "keywords": ["পুরোনো হার্ডওয়্যার", "ডিস্ক ধ্বংস", "সিডি ডিভিডি", "হ্যামার", "শারীরিক ধ্বংস"],
+    "summary": "পুরোনো কম্পিউটার, ডিস্ক বা সিডি/ডিভিডি বিক্রি বা ফেলে দেওয়ার আগে ড্রাইভ এনক্রিপ্ট বা শারীরিক ধ্বংসের নিয়ম।",
+    "tags": ["hardware", "storage"]
+  },
+  {
+    "id": "guide:how-to-detect-bluetooth-trackers",
+    "type": "guide",
+    "title": "কীভাবে ব্লুটুথ ট্র্যাকার শনাক্ত করবেন",
+    "subtitle": "How to: Detect Bluetooth Trackers",
+    "url": "/ssd/how-to-detect-bluetooth-trackers/",
+    "keywords": ["ব্লুটুথ ট্র্যাকার", "AirTag", "এয়ারট্যাগ", "Tile", "SmartTag", "Bluetooth tracker", "নজরদারি", "অবস্থান ট্র্যাকিং", "অটোমেটিক ডিটেকশন", "ম্যানুয়াল সার্চ", "অজানা ট্র্যাকার"],
+    "summary": "এয়ারট্যাগ, টাইল বা স্মার্টট্যাগের মতো ব্লুটুথ ডিভাইসের মাধ্যমে অনাকাঙ্ক্ষিত নজরদারি ও ট্র্যাকিং শনাক্ত ও নিষ্ক্রিয় করার নিয়ম।",
+    "tags": ["bluetooth", "trackers", "airtag", "privacy", "surveillance"]
+  },
+  {
+    "id": "section:how-to-detect-bluetooth-trackers:what-is",
+    "type": "section",
+    "title": "ব্লুটুথ ট্র্যাকার কী?",
+    "subtitle": "What's a Bluetooth Tracker?",
+    "parentTitle": "কীভাবে ব্লুটুথ ট্র্যাকার শনাক্ত করবেন",
+    "url": "/ssd/how-to-detect-bluetooth-trackers/#whats-a-bluetooth-tracker",
+    "keywords": ["ব্লুটুথ ট্র্যাকার", "AirTag", "Find My", "অবস্থান ট্র্যাকিং", "ট্যাগ"],
+    "summary": "ব্লুটুথ ট্র্যাকার কীভাবে কাজ করে এবং কীভাবে এটি কারও অজান্তে নজরদারি বা স্টকিংয়ের জন্য অপব্যবহার হতে পারে।",
+    "tags": ["bluetooth", "trackers"]
+  },
+  {
+    "id": "section:how-to-detect-bluetooth-trackers:automatic",
+    "type": "section",
+    "title": "আপনার ফোন স্বয়ংক্রিয়ভাবে ট্র্যাকার খুঁজে পেলে কেমন দেখায়",
+    "subtitle": "Automatic Detection",
+    "parentTitle": "কীভাবে ব্লুটুথ ট্র্যাকার শনাক্ত করবেন",
+    "url": "/ssd/how-to-detect-bluetooth-trackers/#automatic-detection",
+    "keywords": ["স্বয়ংক্রিয় অ্যালার্ট", "iOS অ্যালার্ট", "Android অ্যালার্ট", "ট্র্যাকার নোটিফিকেশন", "শব্দ বাজানো"],
+    "summary": "iPhone ও Android ফোনে অজানা ট্র্যাকার কাছাকাছি থাকলে আসা স্বয়ংক্রিয় নোটিফিকেশন ও শব্দ বাজিয়ে শনাক্ত করার উপায়।",
+    "tags": ["alerts", "detection"]
+  },
+  {
+    "id": "section:how-to-detect-bluetooth-trackers:manual",
+    "type": "section",
+    "title": "কীভাবে ম্যানুয়ালি ব্লুটুথ ট্র্যাকার খুঁজবেন",
+    "subtitle": "Manual Search",
+    "parentTitle": "কীভাবে ব্লুটুথ ট্র্যাকার শনাক্ত করবেন",
+    "url": "/ssd/how-to-detect-bluetooth-trackers/#manual-search",
+    "keywords": ["ম্যানুয়াল সার্চ", "ম্যানুয়াল স্ক্যান", "Tracker Detect", "AirGuard", "ব্লুটুথ স্ক্যানার"],
+    "summary": "অ্যান্ড্রয়েড এবং আইফোনে অ্যাপ ও সেটিংসের মাধ্যমে সক্রিয়ভাবে চারপাশের অজানা ব্লুটুথ ডিভাইস স্ক্যান করার নিয়ম।",
+    "tags": ["manual-scan", "apps"]
+  },
+  {
+    "id": "section:how-to-detect-bluetooth-trackers:found",
+    "type": "section",
+    "title": "অজানা ট্র্যাকার পেলে কী করবেন",
+    "subtitle": "What to Do If Found",
+    "parentTitle": "কীভাবে ব্লুটুথ ট্র্যাকার শনাক্ত করবেন",
+    "url": "/ssd/how-to-detect-bluetooth-trackers/#what-to-do-if-found",
+    "keywords": ["ট্র্যাকার নিষ্ক্রিয়", "ব্যাটারি খোলা", "সিরিয়াল নম্বর", "আইনশৃঙ্খলা বাহিনী", "প্রমাণ সংরক্ষণ"],
+    "summary": "অজানা ট্র্যাকার খুঁজে পেলে ব্যাটারি খুলে নিষ্ক্রিয় করা, সিরিয়াল নম্বর রেকর্ড রাখা এবং নিরাপত্তার আইনি পদক্ষেপ।",
+    "tags": ["safety", "action"]
+  },
+  {
+    "id": "guide:how-to-enable-lockdown-mode-on-iphone",
+    "type": "guide",
+    "title": "কীভাবে: আইফোনে লকডাউন মোড চালু করবেন",
+    "subtitle": "How to: Enable Lockdown Mode on iPhone",
+    "url": "/ssd/how-to-enable-lockdown-mode-on-iphone/",
+    "keywords": ["লকডাউন মোড", "Lockdown Mode", "আইফোন", "iPhone", "iPad", "iOS", "ম্যাক", "ম্যালওয়্যার", "স্পাইওয়্যার", "Pegasus", "সিটিজেন ল্যাব", "মার্সেনারি স্পাইওয়্যার", "ফিঙ্গারপ্রিন্টিং"],
+    "summary": "উন্নত সাইবার আক্রমণ ও মার্সেনারি স্পাইওয়্যার থেকে আইফোন ও আইপ্যাড রক্ষা করতে লকডাউন মোড সক্রিয় করার নির্দেশিকা।",
+    "tags": ["iphone", "apple", "lockdown-mode", "spyware", "pegasus", "ios"]
+  },
+  {
+    "id": "section:how-to-enable-lockdown-mode-on-iphone:what-is",
+    "type": "section",
+    "title": "লকডাউন মোড কী?",
+    "subtitle": "What is Lockdown Mode?",
+    "parentTitle": "কীভাবে: আইফোনে লকডাউন মোড চালু করবেন",
+    "url": "/ssd/how-to-enable-lockdown-mode-on-iphone/#what-is-lockdown-mode",
+    "keywords": ["লকডাউন মোড", "স্পাইওয়্যার", "ম্যালওয়্যার", "ব্রাউজিং সীমাবদ্ধতা", "মেসেজ অ্যাটাচমেন্ট", "ফিঙ্গারপ্রিন্টিং"],
+    "summary": "লকডাউন মোডের নিরাপত্তা বৈশিষ্ট্য, ওয়েব প্রযুক্তি সীমাবদ্ধতা এবং মেসেজে অ্যাটাচমেন্ট ব্লক করার প্রক্রিয়া।",
+    "tags": ["apple", "lockdown-mode"]
+  },
+  {
+    "id": "section:how-to-enable-lockdown-mode-on-iphone:enable",
+    "type": "section",
+    "title": "কীভাবে লকডাউন মোড চালু করবেন",
+    "subtitle": "How to Enable Lockdown Mode",
+    "parentTitle": "কীভাবে: আইফোনে লকডাউন মোড চালু করবেন",
+    "url": "/ssd/how-to-enable-lockdown-mode-on-iphone/#how-to-enable-lockdown-mode",
+    "keywords": ["লকডাউন চালু", "Settings", "সেটিংস", "Privacy & Security", "রিস্টার্ট", "পাসকোড"],
+    "summary": "আইফোনের Settings > Privacy & Security থেকে ধাপ অনুসারে লকডাউন মোড চালু ও রিস্টার্ট করার সচিত্র প্রক্রিয়া।",
+    "tags": ["settings", "how-to"]
+  },
+  {
+    "id": "section:how-to-enable-lockdown-mode-on-iphone:allow-apps",
+    "type": "section",
+    "title": "কীভাবে নির্দিষ্ট অ্যাপ বা সাইটকে স্বাভাবিকভাবে কাজ করতে দেবেন",
+    "subtitle": "How to Allow Certain Apps or Sites to Work Normally",
+    "parentTitle": "কীভাবে: আইফোনে লকডাউন মোড চালু করবেন",
+    "url": "/ssd/how-to-enable-lockdown-mode-on-iphone/#how-to-allow-certain-apps-or-sites-to-work-normally",
+    "keywords": ["ব্যতিক্রম", "এক্সক্লুশন", "Safari", "সাফারি", "ওয়েবসাইট সেটিংস", "লকডাউন বন্ধ"],
+    "summary": "নির্দিষ্ট ওয়েবসাইট বা অ্যাপের জন্য লকডাউন মোডের সুরক্ষায় শিথিলতা আনার নিয়ম ও নিরাপত্তা সতর্কতা।",
+    "tags": ["exceptions", "safari"]
+  },
+  {
+    "id": "glossary:malware",
+    "type": "glossary",
+    "title": "ম্যালওয়্যার (malware)",
+    "subtitle": "Malware",
+    "url": "/ssd/glossary/#term-malware",
+    "keywords": ["ম্যালওয়্যার", "malware", "ভাইরাস", "ক্ষতিকর সফটওয়্যার", "র‍্যানসমওয়্যার"],
+    "summary": "ক্ষতি করার উদ্দেশ্যে তৈরি ক্ষতিকর সফটওয়্যার — ভাইরাস, র‍্যানসমওয়্যার ও স্পাইওয়্যার এর অন্তর্ভুক্ত।",
+    "tags": ["threats", "glossary"]
+  },
+  {
+    "id": "glossary:spyware",
+    "type": "glossary",
+    "title": "স্পাইওয়্যার (spyware)",
+    "subtitle": "Spyware",
+    "url": "/ssd/glossary/#term-spyware",
+    "keywords": ["স্পাইওয়্যার", "spyware", "Pegasus", "পেগাসাস", "নজরদারি", "গুপ্তচর"],
+    "summary": "একধরনের ম্যালওয়্যার যা ব্যবহারকারীর অজান্তে অবস্থান, কথোপকথন, পাসওয়ার্ড ও ব্যক্তিগত তথ্য পাচার করে দেয়।",
+    "tags": ["surveillance", "glossary"]
+  },
+  {
+    "id": "glossary:phishing",
+    "type": "glossary",
+    "title": "ফিশিং (phishing)",
+    "subtitle": "Phishing",
+    "url": "/ssd/glossary/#term-phishing",
+    "keywords": ["ফিশিং", "phishing", "ভুয়া বার্তা", "প্রতারণা", "পাসওয়ার্ড চুরি"],
+    "summary": "প্রতারণামূলক বার্তা বা ভুয়া ওয়েবসাইটের মাধ্যমে পাসওয়ার্ড, ব্যাংকের তথ্য বা ব্যক্তিগত তথ্য হাতিয়ে নেওয়ার চেষ্টা।",
+    "tags": ["threats", "glossary"]
+  },
+  {
+    "id": "glossary:spearphishing",
+    "type": "glossary",
+    "title": "স্পিয়ারফিশিং (spearphishing)",
+    "subtitle": "Spearphishing",
+    "url": "/ssd/glossary/#term-spearphishing",
+    "keywords": ["স্পিয়ারফিশিং", "spearphishing", "টার্গেটেড ফিশিং", "নির্দিষ্ট ব্যক্তি"],
+    "summary": "নির্দিষ্ট ব্যক্তিকে নিশানা করে ব্যক্তিগত তথ্যের ওপর ভিত্তি করে পাঠানো বিশ্বাসযোগ্য কিন্তু বিপজ্জনক প্রতারণামূলক বার্তা।",
+    "tags": ["threats", "glossary"]
+  },
+  {
+    "id": "glossary:fingerprinting",
+    "type": "glossary",
+    "title": "ফিঙ্গারপ্রিন্টিং (fingerprinting)",
+    "subtitle": "Fingerprinting",
+    "url": "/ssd/glossary/#term-fingerprinting",
+    "keywords": ["ফিঙ্গারপ্রিন্টিং", "fingerprinting", "ব্রাউজার ট্র্যাকিং", "কুকি ছাড়া ট্র্যাকিং"],
+    "summary": "ব্রাউজার, ডিভাইস বা স্ক্রিনের অনন্য বৈশিষ্ট্য মিলিয়ে কুকি ছাড়াই কোনো ব্যবহারকারীকে শনাক্ত করার প্রযুক্তি।",
+    "tags": ["surveillance", "glossary"]
+  },
+  {
+    "id": "glossary:cell-site-simulator",
+    "type": "glossary",
+    "title": "সেল সাইট সিমুলেটর (cell site simulator)",
+    "subtitle": "Cell Site Simulator / IMSI Catcher",
+    "url": "/ssd/glossary/#term-cell-site-simulator",
+    "keywords": ["সেল সাইট সিমুলেটর", "cell site simulator", "IMSI catcher", "মোবাইল টাওয়ার সিমুলেশন"],
+    "summary": "নকল মোবাইল টাওয়ারের মতো কাজ করা যন্ত্র, যা আশেপাশের ফোনগুলোর অবস্থান ও কল শনাক্ত করতে পারে।",
+    "tags": ["surveillance", "glossary"]
+  },
+  {
+    "id": "glossary:encryption",
+    "type": "glossary",
+    "title": "এনক্রিপশন (encryption)",
+    "subtitle": "Encryption",
+    "url": "/ssd/glossary/#term-encryption",
+    "keywords": ["এনক্রিপশন", "encryption", "গোপন চাবি", "তালাবদ্ধ ডেটা", "সাইফার"],
+    "summary": "তথ্যকে গাণিতিক পদ্ধতিতে তালাবন্ধ করার প্রক্রিয়া, যাতে সঠিক চাবি ছাড়া কোনো অননুমোদিত ব্যক্তি তা পড়তে না পারে।",
+    "tags": ["encryption", "glossary"]
+  },
+  {
+    "id": "glossary:e2e-encryption",
+    "type": "glossary",
+    "title": "এন্ড-টু-এন্ড এনক্রিপশন (end-to-end encryption)",
+    "subtitle": "End-to-End Encryption",
+    "url": "/ssd/glossary/#term-e2e-encryption",
+    "keywords": ["এন্ড-টু-এন্ড এনক্রিপশন", "end-to-end encryption", "E2EE", "প্রেরক প্রাপক সুরক্ষা"],
+    "summary": "বার্তা প্রেরকের ডিভাইসে তালাবন্ধ হয়ে সরাসরি প্রাপকের ডিভাইসে খোলে — মাঝপথে সার্ভিস প্রোভাইডারও পড়তে পারে না।",
+    "tags": ["encryption", "glossary"]
+  },
+  {
+    "id": "glossary:metadata",
+    "type": "glossary",
+    "title": "মেটাডাটা (metadata)",
+    "subtitle": "Metadata",
+    "url": "/ssd/glossary/#term-metadata",
+    "keywords": ["মেটাডাটা", "metadata", "তথ্যের তথ্য", "যোগাযোগের রেকর্ড"],
+    "summary": "বার্তার মূল বিষয়বস্তু ছাড়া বার্তার আনুষঙ্গিক তথ্য — যেমন কে, কখন, কাকে, কোথা থেকে বার্তা পাঠাল।",
+    "tags": ["privacy", "glossary"]
+  },
+  {
+    "id": "glossary:2fa",
+    "type": "glossary",
+    "title": "টু-ফ্যাক্টর অথেনটিকেশন (2FA)",
+    "subtitle": "Two-Factor Authentication",
+    "url": "/ssd/glossary/#term-2fa",
+    "keywords": ["টু-ফ্যাক্টর অথেনটিকেশন", "two-factor authentication", "2FA", "দ্বি-ধাপ প্রমাণীকরণ", "OTP"],
+    "summary": "পাসওয়ার্ডের পাশাপাশি SMS কোড বা অ্যাপের মাধ্যমে দ্বিতীয় স্তরের যাচাই ব্যবস্থা।",
+    "tags": ["authentication", "glossary"]
+  },
+  {
+    "id": "glossary:lockdown-mode",
+    "type": "glossary",
+    "title": "লকডাউন মোড (lockdown mode)",
+    "subtitle": "Lockdown Mode",
+    "url": "/ssd/glossary/#term-lockdown-mode",
+    "keywords": ["লকডাউন মোড", "lockdown mode", "আইফোন সুরক্ষা", "অ্যাপল মোড"],
+    "summary": "আইফোন ও আইপ্যাডে একটি বিশেষ সর্বোচ্চ সুরক্ষা সেটিং, যা মার্সেনারি সাইবার আক্রমণ প্রতিরোধে ফিচার সীমিত করে।",
+    "tags": ["apple", "security", "glossary"]
+  },
+  {
+    "id": "glossary:secure-deletion",
+    "type": "glossary",
+    "title": "নিরাপদে ডেটা মোছা (secure deletion)",
+    "subtitle": "Secure Deletion",
+    "url": "/ssd/glossary/#term-secure-deletion",
+    "keywords": ["নিরাপদে ডেটা মোছা", "secure deletion", "স্থায়ী মোছা", "ফরেনসিক প্রতিরোধ"],
+    "summary": "সাধারণ ডিলিটের পরিবর্তে ডেটা এমনভাবে অপাঠযোগ্য করা যাতে বিশেষ ফরেনসিক সফটওয়্যার দিয়েও তা উদ্ধার না করা যায়।",
+    "tags": ["storage", "glossary"]
+  },
+  {
+    "id": "glossary:shred",
+    "type": "glossary",
+    "title": "শ্রেড (shred)",
+    "subtitle": "Shred",
+    "url": "/ssd/glossary/#term-shred",
+    "keywords": ["শ্রেড", "shred", "শ্রেডিং", "ফাইল টুকরো করা"],
+    "summary": "নির্দিষ্ট ফাইল বা ফোল্ডারের ওপর নতুন এলোমেলো ডেটা লিখে তা সম্পূর্ণ স্থায়ীভাবে অপাঠযোগ্য করা।",
+    "tags": ["storage", "glossary"]
+  },
+  {
+    "id": "glossary:ssd",
+    "type": "glossary",
+    "title": "সলিড-স্টেট ড্রাইভ (SSD)",
+    "subtitle": "Solid-State Drive (SSD)",
+    "url": "/ssd/glossary/#term-ssd",
+    "keywords": ["সলিড-স্টেট ড্রাইভ", "solid-state drive", "SSD", "ফ্ল্যাশ মেমরি"],
+    "summary": "চিপভিত্তিক দ্রুতগতির স্টোরেজ মাধ্যম, যেখানে ওয়্যার লেভেলিংয়ের কারণে নিরাপদ ডিলিটের চেয়ে এনক্রিপশন বেশি কার্যকর।",
+    "tags": ["hardware", "storage", "glossary"]
+  },
+  {
+    "id": "glossary:wear-leveling",
+    "type": "glossary",
+    "title": "ওয়্যার লেভেলিং (wear leveling)",
+    "subtitle": "Wear Leveling",
+    "url": "/ssd/glossary/#term-wear-leveling",
+    "keywords": ["ওয়্যার লেভেলিং", "wear leveling", "SSD মেমরি বিতরণ"],
+    "summary": "SSD-র ভেতর সব মেমরি ব্লকে সমানভাবে তথ্য লেখার প্রযুক্তি, যার কারণে পুরোনো ডেটার টুকরো ডিস্কে থেকে যেতে পারে।",
+    "tags": ["hardware", "glossary"]
+  },
+  {
+    "id": "glossary:password-manager",
+    "type": "glossary",
+    "title": "পাসওয়ার্ড ম্যানেজার (password manager)",
+    "subtitle": "Password Manager",
+    "url": "/ssd/glossary/#term-password-manager",
+    "keywords": ["পাসওয়ার্ড ম্যানেজার", "password manager", "পাসওয়ার্ড সুরক্ষিত রাখা", "ভল্ট"],
+    "summary": "একটি নিরাপদ ভল্ট অ্যাপ যা কঠিন ও জটিল পাসওয়ার্ড তৈরি, এনক্রিপ্ট করে সংরক্ষণ এবং স্বয়ংক্রিয় পূরণ করে দেয়।",
+    "tags": ["passwords", "glossary"]
+  },
+  {
+    "id": "glossary:threat-model",
+    "type": "glossary",
+    "title": "হুমকি মডেল (threat model)",
+    "subtitle": "Threat Model",
+    "url": "/ssd/glossary/#term-threat-model",
+    "keywords": ["হুমকি মডেল", "threat model", "ঝুঁকি মূল্যায়ন", "নিরাপত্তা পরিকল্পনা"],
+    "summary": "কে আক্রমণ করতে পারে, কী তথ্য রক্ষা করতে হবে এবং সম্ভাব্য ঝুঁকি কী — তা বিশ্লেষণ করার নিরাপত্তামূলক কাঠামো।",
+    "tags": ["security", "glossary"]
+  },
+  {
+    "id": "glossary:credential-harvesting",
+    "type": "glossary",
+    "title": "ক্রেডেনশিয়াল হারভেস্টিং (credential harvesting)",
+    "subtitle": "Credential Harvesting",
+    "url": "/ssd/glossary/#term-credential-harvesting",
+    "keywords": ["ক্রেডেনশিয়াল হারভেস্টিং", "credential harvesting", "লগইন তথ্য চুরি"],
+    "summary": "নকল লগইন পেজ বা প্রতারণার মাধ্যমে বিপুল সংখ্যক মানুষের ইউজারনেম ও পাসওয়ার্ড চুরি করার কৌশল।",
+    "tags": ["threats", "glossary"]
+  },
+  {
+    "id": "glossary:lookalike-letters",
+    "type": "glossary",
+    "title": "দেখতে একই রকম অক্ষর (lookalike letters)",
+    "subtitle": "Lookalike Letters / Homoglyphs",
+    "url": "/ssd/glossary/#term-lookalike-letters",
+    "keywords": ["দেখতে একই রকম অক্ষর", "lookalike letters", "homoglyph", "নকল ডোমেইন"],
+    "summary": "প্রতারকদের ব্যবহৃত এমন অক্ষর বা প্রতীক যা দেখতে আসল অক্ষরের মতো কিন্তু অন্য ক্যারেক্টার কোড (যেমন: 1 এবং l)।",
+    "tags": ["phishing", "glossary"]
+  }
+]

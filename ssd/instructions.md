@@ -170,7 +170,8 @@ When converting an `index.md` to `index.html`:
    - Apply glossary markup to first occurrences.
    - Apply callout markup where the source has blockquotes or warning/tip markers.
    - Use `<figure>/<figcaption>` for every image.
-6. **Verify** the rendered HTML against the source `index.md` — every sentence must be accounted for.
+6. **Update the search index**: Add the new guide and its key sections to `ssd/search-index.json`.
+7. **Verify** the rendered HTML against the source `index.md` — every sentence must be accounted for.
 
 ---
 
@@ -205,6 +206,7 @@ For a complete list with all terms, see [`ssd/glossary.md`](../glossary.md) and 
 ssd/
 ├── TEMPLATE.html          ← canonical HTML template — read before any conversion
 ├── instructions.md        ← this file
+├── search-index.json      ← local search index for SSD guides and glossary
 ├── glossary.md            ← master Bengali terminology list
 ├── glossary/index.html    ← rendered glossary page
 ├── style-guide.md         ← translation writing style guidelines
@@ -226,5 +228,6 @@ If a new article introduces a technical term not yet in `glossary.md`:
 
 1. Add the term (English → Bengali) to `ssd/glossary.md`.
 2. Add the same entry to the term list in `ssd/glossary/index.html`.
-3. If the term belongs in the "মনে রাখবেন" quick-reference table, add it there too.
-4. Use the agreed Bengali rendering **consistently** across all articles — do not invent a different translation for the same term in a different guide.
+3. Add the glossary entry to `ssd/search-index.json`.
+4. If the term belongs in the "মনে রাখবেন" quick-reference table, add it there too.
+5. Use the agreed Bengali rendering **consistently** across all articles — do not invent a different translation for the same term in a different guide.
