@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="bn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>কীভাবে: আইফোনে লকডাউন মোড চালু করবেন — বাংলা অনুবাদ</title>
+  <meta name="description"
+    content="কীভাবে আইফোনে লকডাউন মোড (Lockdown Mode) চালু করবেন — EFF Surveillance Self-Defense-এর স্বাধীন বাংলা অনুবাদ।">
+  <link rel="canonical" href="https://translation.samin-yasar.dev/ssd/how-to-enable-lockdown-mode-on-iphone/">
+  <link rel="alternate" hreflang="en" href="https://ssd.eff.org/module/how-to-enable-lockdown-mode-on-iphone">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
+  <div class="site-shell">
+    <header class="site-header" aria-label="সাইট নেভিগেশন">
+      <div class="brand-block">
+        <a class="brand" href="/ssd/">নজরদারি থেকে আত্মরক্ষা নির্দেশিকা</a>
+      </div>
+      <div class="header-actions">
+        <a class="icon-link"
+          href="https://github.com/Samin-yasar/translation/tree/main/ssd/how-to-enable-lockdown-mode-on-iphone"
+          aria-label="GitHub রিপোজিটরি" title="GitHub রিপোজিটরি">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.25c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.31 3.48 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.64-5.48 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z" />
+          </svg>
+        </a>
+        <button class="theme-toggle" type="button" aria-label="ডার্ক থিম চালু করুন" title="ডার্ক থিম">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="page-content">
+      <nav class="pagination pagination-top" aria-label="গাইড নেভিগেশন"><a href="/ssd/">← সব গাইড</a><span
+          aria-hidden="true"></span></nav>
+      <article>
+        <h1 id="how-to-enable-lockdown-mode-on-iphone">কীভাবে: আইফোনে লকডাউন মোড (Lockdown Mode) চালু করবেন <a
+            class="heading-anchor" href="#how-to-enable-lockdown-mode-on-iphone" aria-label="এই অনুচ্ছেদের লিংক">#</a></h1>
+        <p class="review-meta"><strong>সর্বশেষ পর্যালোচনা:</strong> ৩ সেপ্টেম্বর, ২০২৪</p>
+        <blockquote>
+          <p><strong>লাইসেন্স ও অ্যাট্রিবিউশন নোট</strong></p>
+          <p>এই লেখাটি Electronic Frontier Foundation (EFF)-এর Surveillance Self-Defense (SSD) প্রকল্পের &quot;How to:
+            Enable Lockdown Mode on iPhone&quot; নিবন্ধের একটি বাংলা অনুবাদ। মূল নিবন্ধ: <a
+              href="https://ssd.eff.org/module/how-to-enable-lockdown-mode-on-iphone">https://ssd.eff.org/module/how-to-enable-lockdown-mode-on-iphone</a>
+          </p>
+          <p>মূল লেখাটি <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+              International (CC BY 4.0)</a> লাইসেন্সের অধীনে প্রকাশিত। এই অনুবাদও একই লাইসেন্সের অধীনে প্রকাশিত।</p>
+          <p>অনুবাদ করা হয়েছে মূল ইংরেজি লেখা থেকে; এতে পরিবর্তন (ভাষান্তর) করা হয়েছে। এই অনুবাদ EFF কর্তৃক অনুমোদিত
+            বা সমর্থিত নয়।</p>
+          <p>অনুবাদক: সামিন ইয়াসার · অনুবাদের তারিখ: ০৫ অক্টোবর, ২০২৬</p>
+        </blockquote>
+        <hr>
+
+        <h2 id="what-is-lockdown-mode">লকডাউন মোড কী? <a class="heading-anchor" href="#what-is-lockdown-mode"
+            aria-label="এই অনুচ্ছেদের লিংক">#</a></h2>
+
+        <p>লকডাউন মোড আইফোন, আইপ্যাড ও ম্যাকের জন্য একটি ঐচ্ছিক সেটিং, যা ঝুঁকিপূর্ণ অবস্থানে থাকা ব্যক্তিদের নির্দিষ্ট ধরনের ডিজিটাল হুমকি থেকে রক্ষা করার জন্য তৈরি। iOS 16, iPadOS 16, macOS 13 এবং এর পরবর্তী সংস্করণ চালাতে সক্ষম যেকোনো ডিভাইসে এটি পাওয়া যায়।</p>
+
+        <p>অ্যাপল ডিভাইসকে লক্ষ্যবস্তু করা <abbr class="glossary-term" title="ম্যালওয়্যার হলো ক্ষতিকর সফটওয়্যার: অ্যাপ বা প্রোগ্রাম যা ডিভাইসে অবাঞ্ছিত কাজ করে, যেমন পাসওয়ার্ড চুরি, গোপনে নজরদারি বা ডেটা মুছে ফেলা।">ম্যালওয়্যার (malware)</abbr> ও <abbr class="glossary-term" title="স্পাইওয়্যার হলো এক ধরনের ম্যালওয়্যার যা ব্যবহারকারীর অজান্তে ডিভাইসের তথ্য সংগ্রহ, অবস্থান ট্র্যাকিং, গোপনে ক্যামেরা ও মাইক্রোফোন চালু বা বার্তা নজরদারি করার জন্য তৈরি।">স্পাইওয়্যারের (spyware)</abbr> নির্মাতারা সাধারণত প্ল্যাটফর্মের নির্দিষ্ট দুর্বলতার ওপর মনোযোগ দেয়, যেগুলো প্রায়ই ডেটা শেয়ারিং, যোগাযোগের টুল বা মৌলিক ফাইল ফরম্যাট পরিচালনা করে। উদাহরণস্বরূপ, সিটিজেন ল্যাব (Citizen Lab) এমন একটি এক্সপ্লয়েট শনাক্ত করেছে যা <a href="https://citizenlab.ca/2023/09/blastpass-nso-group-iphone-zero-click-zero-day-exploit-captured-in-the-wild/">অ্যাপল ওয়ালেট পাস (Apple Wallet pass)</a> ব্যবহার করত, এবং আরেকটি যা <a href="https://citizenlab.ca/2023/04/nso-groups-pegasus-spyware-returns-in-2022/">হোমকিটকে (HomeKit)</a> লক্ষ্য করত। সিটিজেন ল্যাব আরও দেখেছে যে এ ধরনের <a href="https://citizenlab.ca/2023/09/blastpass-nso-group-iphone-zero-click-zero-day-exploit-captured-in-the-wild/">অন্যান্য</a> <a href="https://citizenlab.ca/2023/09/pegasus-infection-of-galina-timchenko-exiled-russian-journalist-and-publisher/">আক্রমণও</a> সম্ভবত লকডাউন মোড চালু থাকলে ব্যর্থ হতো।</p>
+
+        <p>যেকোনো নিরাপত্তা সফটওয়্যারের মতোই, লকডাউন মোড সব সময় সব হুমকি থেকে নিখুঁত সুরক্ষা দিতে পারে না; তবে বিভিন্ন ক্ষেত্রে, বিশেষ করে সফটওয়্যার ও নিরাপত্তা আপডেটের সঙ্গে একত্রে ব্যবহার করলে, এটি ঐতিহাসিকভাবে কার্যকর প্রমাণিত হয়েছে।</p>
+
+        <p>স্পাইওয়্যারের মাধ্যমে <a href="https://www.eff.org/deeplinks/2021/07/nso-group-leak-shows-need-real-device-security-accountability-and-redress-those">নজরদারির ঝুঁকিতে থাকা</a> সাংবাদিক, মানবাধিকার ও গণতন্ত্রের পক্ষের কর্মী এবং সরকারি কর্মচারীদের জন্য লকডাউন মোড কার্যকর প্রমাণিত হয়েছে। যুক্তরাষ্ট্রে বিক্ষোভকারীদের বিরুদ্ধে <a href="https://www.eff.org/deeplinks/2020/06/quick-and-dirty-guide-cell-phone-surveillance-protests?language=en">সেল সাইট সিমুলেটর (cell site simulator) ব্যবহারের নির্দিষ্ট প্রমাণ খুবই কম</a> থাকা সত্ত্বেও, আমরা মনে করি নিজেকে রক্ষা করার জন্য প্রয়োজনীয় পদক্ষেপগুলো এতটাই সহজ যে বেশিরভাগ বিক্ষোভকারীর জন্য এটি একটি যুক্তিসংগত প্রতিরক্ষামূলক ব্যবস্থা।</p>
+
+        <div class="callout warning" role="note">
+          <div class="callout-label">
+            <svg class="callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                clip-rule="evenodd" />
+            </svg>
+            <span>সতর্কতা</span>
+          </div>
+          <p>কেউ যদি আপনার ফোনে শারীরিকভাবে প্রবেশাধিকার পায়, তাহলে লকডাউন মোড আপনাকে রক্ষা করে না। তাই আপনার ডিভাইসগুলোতে অবশ্যই <a href="https://ssd.eff.org/module/creating-strong-passwords">শক্তিশালী পাসওয়ার্ড ও পাসকোড ব্যবহার করুন</a>।</p>
+        </div>
+
+        <p>লকডাউন মোড চালু থাকলে নির্দিষ্ট ধরনের স্পাইওয়্যার বা ক্ষতিকর প্রোগ্রামের প্রায়শই লক্ষ্যবস্তু হওয়া বেশ কিছু ফিচার আপনার ডিভাইসে বন্ধ হয়ে যায়। উদাহরণস্বরূপ, মেসেজ (Messages) অ্যাপে অনেক ধরনের অ্যাটাচমেন্ট ব্লক করা হয়, আপনার শেয়ার করা ছবি থেকে লোকেশনের তথ্য মুছে ফেলা হয়, এবং আপনার কন্টাক্টে নেই এমন কারও আসা ফেসটাইম (FaceTime) কল ব্লক করা হয়।</p>
+
+        <p>কারও কারও জন্য লকডাউন মোড চালু করলে আইফোন বা আইপ্যাড ব্যবহারের অনুভূতিই উল্লেখযোগ্যভাবে বদলে যাবে, এবং আপনি নিয়মিত ব্যবহার করেন এমন কিছু ফিচার বন্ধ হয়ে যেতে পারে। এমন অনেক ছোট ছোট পরিবর্তন রয়েছে যা আপনি প্রথমে হয়তো খেয়ালই করবেন না, যেমন লকডাউন মোড এসএমএসে আসা টু-ফ্যাক্টর অথেনটিকেশন কোডের অটোফিল বন্ধ করে দেয়; আবার কিছু পরিবর্তন আপনি তৎক্ষণাৎ টের পাবেন, যেমন মেসেজে লিংক প্রিভিউ না পাওয়া। আমাদের "Cover Your Tracks" টুল ব্যবহার করে <a href="https://www.eff.org/deeplinks/2022/09/effs-cover-your-tracks-will-detect-your-use-ios-16s-lockdown-mode">আমরা এটাও জেনেছি যে কোনো ওয়েবসাইট বুঝতে পারে আপনি লকডাউন মোড ব্যবহার করছেন</a>, যা <abbr class="glossary-term" title="ফিঙ্গারপ্রিন্টিং হলো কোনো ব্যবহারকারীকে তার ব্রাউজার বা ডিভাইসের বৈশিষ্ট্যের সমন্বয়ে চিহ্নিত করার কৌশল।">ফিঙ্গারপ্রিন্টিং (fingerprinting)</abbr>-এর একটি অতিরিক্ত মানদণ্ড হিসেবে কাজ করতে পারে। এসব ছাড়ের কিছু অন্যগুলোর চেয়ে মেনে নেওয়া কঠিন হবে; আর এটি আপনার জন্য সার্থক কি না, তা নির্ভর করে <a href="https://ssd.eff.org/module/your-security-plan">আপনার নিরাপত্তা পরিকল্পনা</a>, আপনি কীভাবে ডিভাইসটি ব্যবহার করেন এবং কোন ফিচারগুলোর ওপর নির্ভর করেন তার ওপর।</p>
+
+        <div class="callout note" role="note">
+          <div class="callout-label">
+            <svg class="callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clip-rule="evenodd" />
+            </svg>
+            <span>পরামর্শ</span>
+          </div>
+          <p>পিক্সেল (Pixel) ফোনেও <a href="https://support.google.com/pixelphone/answer/6093922?hl=en#zippy=%2Clock-your-phone-when-extend-unlock-is-on">"Lockdown" নামে একটি ফিচার</a> আছে, কিন্তু এটি অ্যাপল ডিভাইসের মতো একই পরিবর্তন আনে না। এর পরিবর্তে, এটি বায়োমেট্রিক পদ্ধতিতে ডিভাইস আনলক করা বন্ধ করে দেয় এবং ডিভাইস আনলক করতে পিন বা পাসওয়ার্ড প্রয়োজন হয়।</p>
+        </div>
+
+        <p>লকডাউন মোড চালু করার পর আপনি যেসব পরিবর্তনের মুখোমুখি হতে পারেন, তার কয়েকটি এখানে দেওয়া হলো:</p>
+
+        <h3 id="app-and-web-browsing-changes">অ্যাপ ও ওয়েব ব্রাউজিংয়ের পরিবর্তন <a class="heading-anchor"
+            href="#app-and-web-browsing-changes" aria-label="এই অনুচ্ছেদের লিংক">#</a></h3>
+
+        <ul>
+          <li><strong>ওয়েব ব্রাউজিং:</strong> <a href="https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/">জাস্ট-ইন-টাইম (just-in-time) জাভাস্ক্রিপ্ট</a> ও <a href="https://webassembly.org/">ওয়েবঅ্যাসেম্বলির (WebAssembly)</a> মতো কিছু ওয়েব প্রযুক্তি বন্ধ থাকে, যার ফলে সমস্যা হতে পারে এবং কিছু ওয়েবসাইট অদ্ভুত দেখাতে পারে। ওয়েব ফন্টও বন্ধ থাকে, ফলে অনেক ওয়েবসাইট ও অ্যাপের চেহারা বদলে যায়, এবং কিছু সাইটের ছবি সম্পূর্ণভাবে ব্লক হয়ে যেতে পারে।</li>
+          <li><strong>মেসেজ (Messages):</strong> ছবি, ভিডিও ও অডিও ছাড়া বেশিরভাগ ধরনের মেসেজ অ্যাটাচমেন্ট ব্লক করা হয়। এর ফলে মেসেজ অ্যাপের কিছু গুরুত্বপূর্ণ অংশ, যেমন লোকেশন শেয়ারিং ও অ্যানিমেটেড জিআইএফ (GIF) শেয়ার করা, অকেজো হয়ে যেতে পারে, এবং অ্যাপল ক্যাশ (Apple Cash) দিয়ে টাকা পাঠানোর সময় আপনি তাৎক্ষণিকভাবে কী কী তথ্য দেখতে পান তাতেও পরিবর্তন আসে। লিংক প্রিভিউ বন্ধ থাকে, এবং কেউ আপনাকে লিংক পাঠালে সেটি ক্লিকযোগ্য থাকে না; এটি শুধু টেক্সট হিসেবে আসে, যা আপনাকে কপি করে ব্রাউজারে পেস্ট করতে হয়।</li>
+          <li><strong>ফেসটাইম (FaceTime):</strong> আগত ফেসটাইম কল ব্লক করা হয়, যদি না ব্যক্তিটি আপনার কন্টাক্টে থাকেন অথবা আপনি আগে তাঁর সঙ্গে কথা বলে থাকেন। লাইভ ফটোজ (Live Photos)-এর মতো বেশিরভাগ অতিরিক্ত ফিচার বন্ধ থাকে।</li>
+          <li><strong>ছবি (Photos):</strong> ছবি শেয়ার করার সময় লোকেশনের তথ্য স্বয়ংক্রিয়ভাবে বাদ দেওয়া হয়। শেয়ারড অ্যালবাম (Shared Albums) আর কাজ করে না এবং নতুন আমন্ত্রণ ব্লক করা হয়।</li>
+          <li><strong>কিছু অ্যাপল সেবা বন্ধ থাকে:</strong> গেম সেন্টার (Game Center) এবং হোম (Home) অ্যাপে কোনো বাড়ি পরিচালনার আমন্ত্রণ বন্ধ থাকে।</li>
+        </ul>
+
+        <h3 id="background-changes">ব্যাকগ্রাউন্ডের পরিবর্তন <a class="heading-anchor" href="#background-changes"
+            aria-label="এই অনুচ্ছেদের লিংক">#</a></h3>
+
+        <ul>
+          <li><strong>কনফিগারেশন প্রোফাইল ইনস্টল করা যায় না:</strong> লকডাউন মোডে থাকাকালীন কনফিগারেশন প্রোফাইল (configuration profile) ইনস্টল করা যায় না, এবং আপনার ডিভাইসকে কোনো নতুন ডিভাইস সুপারভিশন প্রোগ্রামে (যেমন নিয়োগকর্তা বা স্কুল কর্তৃক কখনো কখনো আবশ্যক করা প্রোগ্রাম) নথিভুক্তও করা যায় না। তবে আপনি যদি আগেই কোনো কনফিগারেশন প্রোফাইল ইনস্টল করে থাকেন, তাহলে সেটি ইনস্টল করাই থাকবে।</li>
+          <li><strong>ওয়্যারলেস ও সেলুলার সংযোগের পরিবর্তন:</strong> 2G সেলুলার সাপোর্ট বন্ধ থাকে। এছাড়া আপনার ডিভাইস কোনো অনিরাপদ ওয়াই-ফাই নেটওয়ার্কে স্বয়ংক্রিয়ভাবে যুক্ত হবে না, যেমন কফি শপ বা বিমানবন্দরে পাওয়া পাসওয়ার্ডবিহীন নেটওয়ার্ক।</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="how-to-enable-lockdown-mode">কীভাবে লকডাউন মোড চালু করবেন <a class="heading-anchor"
+            href="#how-to-enable-lockdown-mode" aria-label="এই অনুচ্ছেদের লিংক">#</a></h2>
+
+        <p>লকডাউন মোড চালু করা কোনো স্থায়ী সিদ্ধান্ত নয়। প্রতিবার সেটিং পরিবর্তনের সময় ডিভাইস রিস্টার্ট করতে হয় বলে এটি চালু ও বন্ধ করতে কিছুটা সময় লাগে, তবে আপনি যতবার খুশি তা করতে পারেন। অর্থাৎ, নির্দিষ্ট কোনো পরিস্থিতিতে আপনি লকডাউন মোড চালু রাখতে পারেন এবং নিরাপদে বাড়ি ফিরে এলে তা বন্ধ করে দিতে পারেন।</p>
+
+        <h3 id="enable-lockdown-mode-on-iphone-or-ipad">আইফোন বা আইপ্যাডে লকডাউন মোড চালু করুন <a class="heading-anchor"
+            href="#enable-lockdown-mode-on-iphone-or-ipad" aria-label="এই অনুচ্ছেদের লিংক">#</a></h3>
+
+        <ol>
+          <li><strong>Settings</strong> (সেটিংস) অ্যাপ খুলুন, তারপর <strong>Privacy &amp; Security</strong> (প্রাইভেসি ও নিরাপত্তা) &gt; <strong>Lockdown Mode</strong>-এ যান এবং <strong>Turn on Lockdown Mode</strong>-এ ট্যাপ করুন।</li>
+          <li><strong>Turn on &amp; Restart</strong>-এ ট্যাপ করুন, আপনার পাসকোড দিন এবং ডিভাইস রিস্টার্ট হওয়া পর্যন্ত অপেক্ষা করুন।</li>
+        </ol>
+
+        <p>লকডাউন মোড বন্ধ করতে একই নির্দেশনা অনুসরণ করুন, তবে এবার <strong>Turn Off Lockdown Mode</strong> বেছে নিন।</p>
+
+        <figure>
+          <img src="media/image-20250516182511-1.jpeg" alt="আইফোনে লকডাউন মোড সেটিংস স্ক্রিন।">
+          <figcaption>আইফোনে লকডাউন মোড সেটিংস স্ক্রিন。</figcaption>
+        </figure>
+
+        <div class="callout warning" role="note">
+          <div class="callout-label">
+            <svg class="callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                clip-rule="evenodd" />
+            </svg>
+            <span>সতর্কতা</span>
+          </div>
+          <p>আপনার যদি এমন কোনো অ্যাপল ওয়াচ থাকে যা লকডাউন মোড চালু থাকা আইফোনের সঙ্গে যুক্ত (paired), তাহলে অ্যাপল ওয়াচেও স্বয়ংক্রিয়ভাবে লকডাউন মোড চালু হয়ে যাবে।</p>
+        </div>
+
+        <h3 id="enable-lockdown-mode-on-mac">ম্যাকে লকডাউন মোড চালু করুন <a class="heading-anchor"
+            href="#enable-lockdown-mode-on-mac" aria-label="এই অনুচ্ছেদের লিংক">#</a></h3>
+
+        <ol>
+          <li><strong>System Settings</strong> (সিস্টেম সেটিংস) খুলুন, তারপর সাইডবার থেকে <strong>Privacy &amp; Security</strong> নির্বাচন করুন।</li>
+          <li><strong>Lockdown Mode</strong>-এ ক্লিক করুন, তারপর <strong>Turn On</strong>-এ ক্লিক করুন।</li>
+          <li><strong>Turn On Lockdown Mode</strong>-এ ক্লিক করুন এবং আপনার পাসওয়ার্ড দিন।</li>
+          <li><strong>Turn On &amp; Restart</strong>-এ ক্লিক করুন এবং কম্পিউটার রিবুট হওয়া পর্যন্ত অপেক্ষা করুন।</li>
+        </ol>
+
+        <p>লকডাউন মোড বন্ধ করতে একই নির্দেশনা অনুসরণ করুন, তবে এবার <strong>Turn Off Lockdown Mode</strong> বেছে নিন।</p>
+
+        <figure>
+          <img src="media/image-20240903095653-2.png" alt="ম্যাকে লকডাউন মোড সেটিংস স্ক্রিন।">
+          <figcaption>ম্যাকে লকডাউন মোড সেটিংস স্ক্রিন。</figcaption>
+        </figure>
+
+        <hr>
+
+        <h2 id="how-to-allow-certain-apps-or-sites-to-work-normally">কীভাবে নির্দিষ্ট অ্যাপ বা সাইটকে স্বাভাবিকভাবে কাজ করতে দেবেন <a
+            class="heading-anchor" href="#how-to-allow-certain-apps-or-sites-to-work-normally"
+            aria-label="এই অনুচ্ছেদের লিংক">#</a></h2>
+
+        <p>আগেই বলা হয়েছে, লকডাউন মোড কিছু ওয়েবসাইট বা অ্যাপকে অকেজো করে দিতে পারে। কিছু ক্ষেত্রে এটি সহনীয়, যেমন কোনো ওয়েবসাইটের ফন্ট হঠাৎ অদ্ভুত দেখালে। কিন্তু অন্য ক্ষেত্রে, যেমন কোনো ওয়েবসাইটে ছবি একেবারেই না দেখালে, সাইটটি ব্যবহারের অযোগ্য হয়ে যেতে পারে। এই সমস্যা সমাধানের জন্য আপনি নির্দিষ্ট ওয়েবসাইট ও অ্যাপকে লকডাউন মোড থেকে অব্যাহতি (exempt) দিতে পারেন। এটি করলে অ্যাপ বা সাইটটি স্বাভাবিকভাবেই কাজ করবে, আর সেই অ্যাপ বা সাইট ব্যবহারে যে ঝুঁকি থাকতে পারে, তাও থেকে যাবে।</p>
+
+        <p>কোনো সাইট বা অ্যাপকে অব্যাহতি দেওয়ার আগে নিরাপত্তার ক্ষেত্রে এর বিনিময়মূল্য ভেবে দেখুন: এই অ্যাপটি ব্যবহার করা কি আপনার সার্বিক নিরাপত্তা দুর্বল করার মতো যথেষ্ট গুরুত্বপূর্ণ?</p>
+
+        <h3 id="on-iphone-and-ipad">আইফোন ও আইপ্যাডে <a class="heading-anchor" href="#on-iphone-and-ipad"
+            aria-label="এই অনুচ্ছেদের লিংক">#</a></h3>
+
+        <p>নির্দিষ্ট কোনো অ্যাপে সমস্যা হলে আপনি সেটিকে লকডাউন মোড থেকে বাদ দিতে পারেন।</p>
+
+        <ol>
+          <li><strong>Settings</strong> অ্যাপ খুলুন, তারপর <strong>Privacy &amp; Security</strong> &gt; <strong>Lockdown Mode</strong>-এ যান, নিচে স্ক্রল করুন এবং <strong>Configure Web Browsing</strong>-এ ট্যাপ করুন।</li>
+          <li>যে অ্যাপকে অব্যাহতি দিতে চান তার পাশের টগল বন্ধ করুন।</li>
+        </ol>
+
+        <p>ওয়েবসাইটকে লকডাউন মোড থেকে বাদ দিতে:</p>
+
+        <ol>
+          <li>সাফারিতে (Safari) ওয়েবসাইটটি খুলুন, ইউআরএল বারের বাম পাশে থাকা আয়তক্ষেত্রাকার টুল আইকনে ট্যাপ করুন (অথবা iOS 17 বা তার আগের সংস্করণ ব্যবহার করলে "Aa" আইকনে)।</li>
+          <li><strong>…</strong> আইকনে ট্যাপ করুন (অথবা iOS 17 বা তার আগের সংস্করণ ব্যবহার করলে <strong>Website Settings</strong> অপশনে)।</li>
+          <li>নিচে স্ক্রল করে <strong>Lockdown Mode</strong> টগল খুঁজে বের করে তা বন্ধ করুন। এরপর থেকে ওই ওয়েবসাইটে গেলে সাফারিতে লাল অক্ষরে <strong>Lockdown Off</strong> লেখা দেখতে পাবেন।</li>
+        </ol>
+
+        <figure>
+          <img src="media/image-20250516182521-2.jpeg" alt="সাফারিতে নির্দিষ্ট ওয়েবসাইটের জন্য লকডাউন মোড বন্ধ করার স্ক্রিন।">
+          <figcaption>সাফারিতে নির্দিষ্ট ওয়েবসাইটের জন্য লকডাউন মোড বন্ধ করার স্ক্রিন。</figcaption>
+        </figure>
+
+        <h3 id="on-mac">ম্যাকে <a class="heading-anchor" href="#on-mac" aria-label="এই অনুচ্ছেদের লিংক">#</a></h3>
+
+        <p>ম্যাকে ওয়েব ব্রাউজ করার ক্ষেত্রে আপনি শুধু সাফারিতেই সাইটকে অব্যাহতি দিতে পারবেন। ক্রোম (Chrome) বা ফায়ারফক্সের (Firefox) মতো অন্য ব্রাউজারে করা কোনো ব্রাউজিং এর মাধ্যমে সুরক্ষিত হবে না, এবং অ্যাপগুলোর আচরণ পরিবর্তনের কোনো উপায়ও নেই।</p>
+
+        <ol>
+          <li>যে ওয়েবসাইটটি বাদ দিতে চান সেখানে যান, তারপর <strong>Safari</strong> &gt; <strong>[সাইটের নাম] Settings</strong>-এ ক্লিক করুন।</li>
+          <li>সাফারির ইউআরএল বারে একটি পপআপ আসবে। <strong>Enable Lockdown Mode</strong>-এর পাশের বক্সে ক্লিক করে সেই সাইটের জন্য এটি বন্ধ করুন।</li>
+        </ol>
+
+        <p>কোন কোন সাইটকে অব্যাহতি দিয়েছেন তা দেখতে <strong>Safari</strong> &gt; <strong>Settings</strong> &gt; <strong>Websites</strong>-এ ক্লিক করুন, তারপর স্ক্রল করে <strong>Lockdown Mode</strong>-এ ক্লিক করুন।</p>
+
+        <div class="callout note" role="note">
+          <div class="callout-label">
+            <svg class="callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clip-rule="evenodd" />
+            </svg>
+            <span>পরামর্শ</span>
+          </div>
+          <p>আপনার একাধিক অ্যাপল ডিভাইস থাকলে, একটিতে লকডাউন মোড চালু করার পর অন্য ডিভাইসগুলোতেও এটি চালু করার জন্য আপনি নোটিফিকেশন পাবেন। এটি ঐচ্ছিক, এবং এর উপযোগিতা নির্ভর করে আপনি ওই অন্য ডিভাইসগুলো কীভাবে ও কী কাজে ব্যবহার করেন তার ওপর।</p>
+        </div>
+
+        <hr>
+
+        <h2 id="translation-and-license">অনুবাদ ও লাইসেন্স সংক্রান্ত তথ্য <a class="heading-anchor"
+            href="#translation-and-license" aria-label="এই অনুচ্ছেদের লিংক">#</a></h2>
+
+        <p>এই লেখাটি ইলেকট্রনিক ফ্রন্টিয়ার ফাউন্ডেশন (Electronic Frontier Foundation, EFF)-এর <em>Surveillance Self-Defense (SSD)</em> প্রকল্পের &quot;How to: Enable Lockdown Mode on iPhone&quot; (সর্বশেষ পর্যালোচনা: সেপ্টেম্বর ৩, ২০২৪) নিবন্ধের একটি বাংলা অনুবাদ।</p>
+
+        <ul>
+          <li><strong>মূল রচনা:</strong> Electronic Frontier Foundation (EFF), Surveillance Self-Defense — <a href="https://ssd.eff.org">https://ssd.eff.org</a></li>
+          <li><strong>লাইসেন্স:</strong> <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a></li>
+          <li><strong>পরিবর্তন:</strong> মূল ইংরেজি লেখাটি বাংলায় অনূদিত হয়েছে। ডিভাইসের মেনু ও বাটনের নাম অনুসরণ সহজ করতে ইংরেজিতেই রাখা হয়েছে।</li>
+          <li>এই অনুবাদটি EFF কর্তৃক অনুমোদিত বা সমর্থিত নয়।</li>
+        </ul>
+      </article>
+
+      <nav class="pagination pagination-bottom" aria-label="গাইড নেভিগেশন"><a href="/ssd/">← সব গাইড</a><span
+          aria-hidden="true"></span></nav>
+    </main>
+
+    <footer class="site-footer">
+      <ul class="footer-nav" aria-label="ফুটার নেভিগেশন">
+        <li><a href="/ssd/">সব গাইড</a></li>
+        <li><a href="/ssd/glossary/">শব্দভাণ্ডার</a></li>
+        <li><a href="https://ssd.eff.org/" rel="noopener noreferrer">মূল SSD (EFF)</a></li>
+        <li><a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer">CC BY 4.0 লাইসেন্স</a></li>
+        <li><a href="https://github.com/Samin-yasar/translation" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <p>এটা একটি স্বাধীন অনুবাদ; EFF এটি তৈরি বা অনুমোদন করেনি।</p>
+    </footer>
+  </div>
+  <script src="/assets/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="bn">
+
+<!--
+  TRANSLATION GUIDE HTML TEMPLATE
+  ================================
+  This file is the canonical template for all SSD Bengali translation guides.
+  Replace every {{PLACEHOLDER}} with the correct value.
+  Follow the structure and element order EXACTLY — do not add, remove, or reorder sections.
+  Read instructions.md in full before making any edits.
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- TITLE: Bengali title of the guide followed by " — বাংলা অনুবাদ" -->
+  <title>{{GUIDE_TITLE_BN}} — বাংলা অনুবাদ</title>
+
+  <!-- DESCRIPTION: Short Bengali summary (~20 words) — used for SEO and social preview -->
+  <meta name="description" content="{{GUIDE_TITLE_BN}} — EFF Surveillance Self-Defense-এর স্বাধীন বাংলা অনুবাদ।">
+
+  <!-- CANONICAL: The live URL of this page on the Bengali translation site -->
+  <link rel="canonical" href="https://translation.samin-yasar.dev/ssd/{{GUIDE_SLUG}}/">
+
+  <!-- ALTERNATE: Points to the original English source article on EFF SSD -->
+  <link rel="alternate" hreflang="en" href="https://ssd.eff.org/module/{{GUIDE_SLUG}}">
+
+  <!-- STYLESHEET: Site-wide stylesheet — do not change this path -->
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <!-- THEME INIT: Inline script to apply saved theme before first paint — do not modify -->
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- SKIP LINK: Accessibility skip-to-content — do not remove or change -->
+  <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
+
+  <div class="site-shell">
+
+    <!-- ═══════════════════════════════════════════════════════
+         SITE HEADER — do not change the structure or classes.
+         Only update: GitHub href to point to this guide's folder.
+         ═══════════════════════════════════════════════════════ -->
+    <header class="site-header" aria-label="সাইট নেভিগেশন">
+      <div class="brand-block">
+        <!-- Header site link: points to /ssd/ for now; change href to "/" when top-level project index is added -->
+        <a class="brand" href="/ssd/">নজরদারি থেকে আত্মরক্ষা নির্দেশিকা</a>
+      </div>
+      <div class="header-actions">
+        <!-- GitHub link: update href to the specific guide folder, keep aria-label unchanged -->
+        <a class="icon-link"
+          href="https://github.com/Samin-yasar/translation/tree/main/ssd/{{GUIDE_SLUG}}"
+          aria-label="GitHub রিপোজিটরি" title="GitHub রিপোজিটরি">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.25c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.31 3.48 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.64-5.48 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z" />
+          </svg>
+        </a>
+        <!-- Theme toggle — do not change icons, classes, or aria-labels -->
+        <button class="theme-toggle" type="button" aria-label="ডার্ক থিম চালু করুন" title="ডার্ক থিম">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!-- END SITE HEADER -->
+
+    <!-- ═══════════════════════════════════════════════════════
+         MAIN CONTENT
+         ═══════════════════════════════════════════════════════ -->
+    <main id="main" class="page-content">
+
+      <!-- TOP PAGINATION — do not change structure; always links back to /ssd/ -->
+      <nav class="pagination pagination-top" aria-label="গাইড নেভিগেশন"><a href="/ssd/">← সব গাইড</a><span
+          aria-hidden="true"></span></nav>
+
+      <article>
+
+        <!-- ─────────────────────────────────────────────────────
+             1. PAGE TITLE
+             id = slugified English guide title, e.g. "how-to-avoid-phishing-attacks"
+             Text = full Bengali title exactly as in index.md h1
+             ───────────────────────────────────────────────────── -->
+        <h1 id="{{GUIDE_SLUG}}">{{GUIDE_TITLE_BN}} <a class="heading-anchor" href="#{{GUIDE_SLUG}}"
+            aria-label="এই অনুচ্ছেদের লিংক">#</a></h1>
+
+        <!-- ─────────────────────────────────────────────────────
+             2. REVIEW DATE
+             Exact Bengali date from index.md frontmatter / first line.
+             Format: "সর্বশেষ পর্যালোচনা: {{DATE_BN}}"
+             ───────────────────────────────────────────────────── -->
+        <p class="review-meta"><strong>সর্বশেষ পর্যালোচনা:</strong> {{REVIEW_DATE_BN}}</p>
+
+        <!-- ─────────────────────────────────────────────────────
+             3. LICENSE / ATTRIBUTION BLOCK
+             Fixed structure — only update the quoted English title,
+             the EFF source URL, the translator name, and translation date.
+             Do NOT reword the boilerplate Bengali sentences.
+             ───────────────────────────────────────────────────── -->
+        <blockquote>
+          <p><strong>লাইসেন্স ও অ্যাট্রিবিউশন নোট</strong></p>
+          <p>এই লেখাটি Electronic Frontier Foundation (EFF)-এর Surveillance Self-Defense (SSD) প্রকল্পের &quot;{{SOURCE_TITLE_EN}}&quot; নিবন্ধের একটি বাংলা অনুবাদ। মূল নিবন্ধ: <a
+              href="https://ssd.eff.org/module/{{GUIDE_SLUG}}">https://ssd.eff.org/module/{{GUIDE_SLUG}}</a>
+          </p>
+          <p>মূল লেখাটি <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+              International (CC BY 4.0)</a> লাইসেন্সের অধীনে প্রকাশিত। এই অনুবাদও একই লাইসেন্সের অধীনে প্রকাশিত।</p>
+          <p>অনুবাদ করা হয়েছে মূল ইংরেজি লেখা থেকে; এতে পরিবর্তন (ভাষান্তর) করা হয়েছে। এই অনুবাদ EFF কর্তৃক অনুমোদিত
+            বা সমর্থিত নয়।</p>
+          <p>অনুবাদক: {{TRANSLATOR_NAME}} · অনুবাদের তারিখ: {{TRANSLATION_DATE_BN}}</p>
+        </blockquote>
+
+        <!-- Horizontal rule after the license block — always present -->
+        <hr>
+
+        <!-- ─────────────────────────────────────────────────────
+             4. OPTIONAL: TABLE OF CONTENTS
+             Include ONLY if the source index.md contains an explicit
+             table of contents or if the article has 4+ major sections.
+             Each li links to a section id using #anchor format.
+             Remove this entire block if no TOC is needed.
+             ───────────────────────────────────────────────────── -->
+        <!--
+        <h2 id="table-of-contents">সূচিপত্র <a class="heading-anchor" href="#table-of-contents"
+            aria-label="এই অনুচ্ছেদের লিংক">#</a></h2>
+        <ul>
+          <li><a href="#section-id-1">{{SECTION_1_TITLE_BN}}</a>
+            <ul>
+              <li><a href="#subsection-id-1a">{{SUBSECTION_1A_TITLE_BN}}</a></li>
+            </ul>
+          </li>
+          <li><a href="#section-id-2">{{SECTION_2_TITLE_BN}}</a></li>
+        </ul>
+        <hr>
+        -->
+
+        <!-- ─────────────────────────────────────────────────────
+             5. ARTICLE BODY
+             Reproduce ALL content from index.md in the following order.
+             Follow the element rules in instructions.md exactly.
+
+             ELEMENT REFERENCE:
+             ─────────────────────────────────────────────────────
+
+             ## H2 SECTION HEADING
+             <h2 id="section-slug">বাংলা শিরোনাম <a class="heading-anchor" href="#section-slug"
+                 aria-label="এই অনুচ্ছেদের লিংক">#</a></h2>
+
+             ### H3 SUB-SECTION HEADING
+             <h3 id="subsection-slug">বাংলা শিরোনাম <a class="heading-anchor" href="#subsection-slug"
+                 aria-label="এই অনুচ্ছেদের লিংক">#</a></h3>
+
+             #### H4 (rare — only if present in source)
+             <h4>বাংলা শিরোনাম</h4>  ← no anchor needed for h4
+
+             PARAGRAPH
+             <p>বাংলা অনুচ্ছেদ পাঠ্য।</p>
+
+             UNORDERED LIST
+             <ul>
+               <li>আইটেম</li>
+             </ul>
+
+             ORDERED LIST (step-by-step instructions)
+             <ol>
+               <li><strong>Button Label</strong> (Bengali context)-এ ট্যাপ করুন।</li>
+             </ol>
+
+             HORIZONTAL RULE (section divider — only where index.md has ---)
+             <hr>
+
+             FIGURE (image with caption)
+             <figure>
+               <img src="media/{{FILENAME}}" alt="{{ALT_TEXT_BN}}">
+               <figcaption>{{CAPTION_BN}}</figcaption>
+             </figure>
+
+             CALLOUT — WARNING (সতর্কতা)
+             <div class="callout warning" role="note">
+               <div class="callout-label">
+                 <svg class="callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                   <path fill-rule="evenodd"
+                     d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                     clip-rule="evenodd" />
+                 </svg>
+                 <span>সতর্কতা</span>
+               </div>
+               <p>{{WARNING_TEXT_BN}}</p>
+             </div>
+
+             CALLOUT — NOTE / TIP (পরামর্শ)
+             <div class="callout note" role="note">
+               <div class="callout-label">
+                 <svg class="callout-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                   <path fill-rule="evenodd"
+                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                     clip-rule="evenodd" />
+                 </svg>
+                 <span>পরামর্শ</span>
+               </div>
+               <p>{{TIP_TEXT_BN}}</p>
+             </div>
+
+             GLOSSARY TERM (inline tooltip — for terms in glossary.md)
+             <abbr class="glossary-term" title="{{BENGALI_DEFINITION}}">{{TERM_BN}} ({{TERM_EN}})</abbr>
+
+             STRONG UI LABEL (button / menu names from instructions — keep in English)
+             <strong>Settings</strong>
+
+             EXTERNAL LINK
+             <a href="{{URL}}">{{LINK_TEXT_BN}}</a>
+
+             ─────────────────────────────────────────────────────
+             PASTE TRANSLATED BODY CONTENT BELOW THIS LINE:
+             ───────────────────────────────────────────────────── -->
+
+        <!-- {{ARTICLE_BODY}} -->
+
+        <!-- ─────────────────────────────────────────────────────
+             6. ATTRIBUTION FOOTER SECTION
+             Include ONLY if index.md has a final attribution section.
+             Mirrors the license info in the blockquote above.
+             ───────────────────────────────────────────────────── -->
+        <!--
+        <hr>
+        <h2 id="translation-and-license">অনুবাদ ও লাইসেন্স সংক্রান্ত তথ্য <a class="heading-anchor"
+            href="#translation-and-license" aria-label="এই অনুচ্ছেদের লিংক">#</a></h2>
+        <p>...</p>
+        -->
+
+      </article>
+
+      <!-- BOTTOM PAGINATION — identical to top, always present -->
+      <nav class="pagination pagination-bottom" aria-label="গাইড নেভিগেশন"><a href="/ssd/">← সব গাইড</a><span
+          aria-hidden="true"></span></nav>
+
+    </main>
+    <!-- END MAIN CONTENT -->
+
+    <!-- ═══════════════════════════════════════════════════════
+         SITE FOOTER — do not change structure or link targets.
+         ═══════════════════════════════════════════════════════ -->
+    <footer class="site-footer">
+      <ul class="footer-nav" aria-label="ফুটার নেভিগেশন">
+        <li><a href="/ssd/">সব গাইড</a></li>
+        <li><a href="/ssd/glossary/">শব্দভাণ্ডার</a></li>
+        <li><a href="https://ssd.eff.org/" rel="noopener noreferrer">মূল SSD (EFF)</a></li>
+        <li><a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer">CC BY 4.0 লাইসেন্স</a></li>
+        <li><a href="https://github.com/Samin-yasar/translation" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <p>এটা একটি স্বাধীন অনুবাদ; EFF এটি তৈরি বা অনুমোদন করেনি।</p>
+    </footer>
+    <!-- END SITE FOOTER -->
+
+  </div><!-- end .site-shell -->
+
+  <!-- SITE SCRIPT — do not change this path or add other scripts -->
+  <script src="/assets/main.js"></script>
+</body>
+
+</html>
