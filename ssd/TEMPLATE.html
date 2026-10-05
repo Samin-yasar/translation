@@ -99,11 +99,14 @@
             aria-label="এই অনুচ্ছেদের লিংক">#</a></h1>
 
         <!-- ─────────────────────────────────────────────────────
-             2. REVIEW DATE
-             Exact Bengali date from index.md frontmatter / first line.
-             Format: "সর্বশেষ পর্যালোচনা: {{DATE_BN}}"
+             2. REVIEW & TRANSLATION DATES
+             Exact Bengali dates from index.md.
+             Format: "সর্বশেষ পর্যালোচনা: {{REVIEW_DATE_BN}}" & "অনুবাদের তারিখ: {{TRANSLATION_DATE_BN}}"
              ───────────────────────────────────────────────────── -->
-        <p class="review-meta"><strong>সর্বশেষ পর্যালোচনা:</strong> {{REVIEW_DATE_BN}}</p>
+        <div class="meta-group">
+          <span class="review-meta"><strong>সর্বশেষ পর্যালোচনা:</strong> {{REVIEW_DATE_BN}}</span>
+          <span class="review-meta"><strong>অনুবাদের তারিখ:</strong> {{TRANSLATION_DATE_BN}}</span>
+        </div>
 
         <!-- ─────────────────────────────────────────────────────
              3. LICENSE / ATTRIBUTION BLOCK

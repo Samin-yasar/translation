@@ -559,7 +559,16 @@ article blockquote {
   color: var(--accent);
 }
 
-/* Review date meta row */
+/* Review date meta row & tags */
+.meta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.meta-group .review-meta,
 .review-meta {
   display: inline-flex;
   align-items: center;
@@ -571,6 +580,11 @@ article blockquote {
   border-radius: 999px;
   font-size: 0.85rem;
   color: var(--muted);
+  line-height: 1.4;
+}
+
+.meta-group .review-meta {
+  margin: 0;
 }
 
 .review-meta strong {
