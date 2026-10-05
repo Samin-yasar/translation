@@ -3,7 +3,31 @@
   src: url("/assets/fonts/noto-sans-bengali.woff2") format("woff2");
   font-display: swap;
   font-style: normal;
-  font-weight: 400 700;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Noto Sans Bengali";
+  src: url("/assets/fonts/noto-sans-bengali.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Noto Sans Bengali";
+  src: url("/assets/fonts/noto-sans-bengali.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Noto Sans Bengali";
+  src: url("/assets/fonts/noto-sans-bengali.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
 }
 
 :root {
@@ -22,6 +46,7 @@
   --shadow: 0 18px 45px rgba(20, 31, 56, 0.08);
   --body-glow: rgba(13, 91, 215, 0.12);
   --radius: 18px;
+  --font-bengali: "Noto Sans Bengali", "Kohinoor Bangla", "Bangla Sangam MN", "Bangla MN", "Nirmala UI", "Vrinda", "Shonar Bangla", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 :root[data-theme="dark"] {
@@ -54,10 +79,12 @@ body {
   background:
     radial-gradient(circle at top left, var(--body-glow), transparent 32%),
     var(--bg);
-  font-family: "Noto Sans Bengali", "Nirmala UI", "Vrinda", sans-serif;
+  font-family: var(--font-bengali);
   font-size: 1.08rem;
   line-height: 1.8;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img { max-width: 100%; }
@@ -963,6 +990,9 @@ footer {
   overflow: hidden;
   transform: translateY(-10px) scale(0.98);
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--font-bengali);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 .search-modal-backdrop.open .search-modal {
@@ -998,6 +1028,7 @@ footer {
   font-family: inherit;
   font-size: 1.05rem;
   color: var(--text);
+  line-height: 1.5;
 }
 
 .search-input::placeholder {
@@ -1033,13 +1064,15 @@ footer {
 
 .search-item {
   display: block;
-  padding: 0.7rem 0.85rem;
+  padding: 0.75rem 0.95rem;
   border-radius: 10px;
   text-decoration: none;
   color: var(--text);
   transition: background 0.15s ease;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
   border: 1px solid transparent;
+  font-family: inherit;
+  text-rendering: optimizeLegibility;
 }
 
 .search-item:hover,
@@ -1053,7 +1086,8 @@ footer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
 }
 
 .search-badge {
@@ -1090,32 +1124,48 @@ footer {
   font-size: 0.98rem;
   color: var(--text);
   flex: 1;
+  line-height: 1.45;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .search-item-parent {
   font-size: 0.78rem;
   color: var(--muted);
   white-space: nowrap;
+  line-height: 1.4;
 }
 
 .search-item-subtitle {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--muted);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
 }
 
 .search-item-summary {
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   color: var(--muted);
-  line-height: 1.45;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .search-item mark {
-  background: rgba(234, 179, 8, 0.3);
+  background: rgba(234, 179, 8, 0.28);
   color: inherit;
-  padding: 0 2px;
-  border-radius: 3px;
+  padding: 0.08em 0.25em;
+  border-radius: 4px;
   font-weight: 600;
+  text-decoration: none;
+  font-style: normal;
+  display: inline;
+  line-height: inherit;
+}
+
+:root[data-theme="dark"] .search-item mark {
+  background: rgba(234, 179, 8, 0.35);
+  color: #fef08a;
 }
 
 .search-footer {
@@ -1147,5 +1197,6 @@ footer {
   text-align: center;
   color: var(--muted);
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 

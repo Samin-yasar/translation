@@ -278,19 +278,116 @@ function initSearch() {
     document.body.style.overflow = "";
   }
 
-  function escapeRegExp(string) {
-    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const BENGALI_COMBINING_MARKS = /^[\u0981-\u0983\u09BC\u09BE-\u09CD\u09D7\u09E2\u09E3\u200C\u200D]+$/;
+
+  function escapeHtml(str) {
+    if (!str) return "";
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function getGraphemeClusters(text) {
+    const clusters = [];
+    if (typeof Intl !== "undefined" && Intl.Segmenter) {
+      const segmenter = new Intl.Segmenter("bn", { granularity: "grapheme" });
+      for (const seg of segmenter.segment(text)) {
+        clusters.push({
+          start: seg.index,
+          end: seg.index + seg.segment.length,
+          text: seg.segment
+        });
+      }
+    } else {
+      const graphemeRegex = /[\u0985-\u0994\u0995-\u09B9\u09CE\u09DC-\u09DF](?:[\u09BC]|[\u09CD][\u0985-\u09B9\u09DC-\u09DF\u200C\u200D]|[\u09BE-\u09CC\u09D7]|[\u0981-\u0983]|[\u200C\u200D])*|[\s\S]/gu;
+      let match;
+      while ((match = graphemeRegex.exec(text)) !== null) {
+        clusters.push({
+          start: match.index,
+          end: match.index + match[0].length,
+          text: match[0]
+        });
+      }
+    }
+    return clusters;
   }
 
   function highlight(text, queryTokens) {
     if (!text) return "";
-    let highlighted = text;
-    queryTokens.forEach(token => {
-      if (!token) return;
-      const regex = new RegExp(`(${escapeRegExp(token)})`, "gi");
-      highlighted = highlighted.replace(regex, "<mark>$1</mark>");
+
+    const validTokens = (queryTokens || [])
+      .map(t => (t || "").trim())
+      .filter(t => t.length > 0 && !BENGALI_COMBINING_MARKS.test(t));
+
+    if (validTokens.length === 0) {
+      return escapeHtml(text);
+    }
+
+    const clusters = getGraphemeClusters(text);
+    const lowerText = text.toLowerCase();
+    const rawRanges = [];
+
+    for (const token of validTokens) {
+      const tokenLower = token.toLowerCase();
+      let idx = lowerText.indexOf(tokenLower);
+      while (idx !== -1) {
+        rawRanges.push({ start: idx, end: idx + tokenLower.length });
+        idx = lowerText.indexOf(tokenLower, idx + 1);
+      }
+    }
+
+    if (rawRanges.length === 0) {
+      return escapeHtml(text);
+    }
+
+    // Snap ranges to unbroken grapheme cluster boundaries
+    const snappedRanges = rawRanges.map(r => {
+      let start = r.start;
+      let end = r.end;
+
+      for (const c of clusters) {
+        if (r.start > c.start && r.start < c.end) {
+          start = Math.min(start, c.start);
+        }
+        if (r.end > c.start && r.end < c.end) {
+          end = Math.max(end, c.end);
+        }
+      }
+      return { start, end };
     });
-    return highlighted;
+
+    snappedRanges.sort((a, b) => a.start - b.start || b.end - a.end);
+    const merged = [];
+    for (const r of snappedRanges) {
+      if (merged.length === 0) {
+        merged.push({ ...r });
+      } else {
+        const last = merged[merged.length - 1];
+        if (r.start <= last.end) {
+          last.end = Math.max(last.end, r.end);
+        } else {
+          merged.push({ ...r });
+        }
+      }
+    }
+
+    let result = "";
+    let cursor = 0;
+    for (const r of merged) {
+      if (r.start > cursor) {
+        result += escapeHtml(text.slice(cursor, r.start));
+      }
+      result += `<mark>${escapeHtml(text.slice(r.start, r.end))}</mark>`;
+      cursor = r.end;
+    }
+    if (cursor < text.length) {
+      result += escapeHtml(text.slice(cursor));
+    }
+
+    return result;
   }
 
   function performSearch(query) {
