@@ -172,6 +172,71 @@
     "tags": ["exceptions", "safari"]
   },
   {
+    "id": "guide:how-enable-two-factor-authentication",
+    "type": "guide",
+    "title": "কীভাবে: দ্বি-স্তরীয় প্রমাণীকরণ (টু-ফ্যাক্টর অথেনটিকেশন) চালু করবেন",
+    "subtitle": "How to: Enable Two-factor Authentication",
+    "url": "/ssd/how-enable-two-factor-authentication/",
+    "keywords": ["টু-ফ্যাক্টর অথেনটিকেশন", "two-factor authentication", "2FA", "দ্বি-স্তরীয় প্রমাণীকরণ", "পাসকি", "passkeys", "সিকিউরিটি কি", "security key", "অথেনটিকেটর অ্যাপ", "authenticator app", "TOTP", "SMS 2FA", "ব্যাকআপ কোড"],
+    "summary": "অনলাইন অ্যাকাউন্ট সুরক্ষিত করতে ২এফএ (2FA), পাসকি, সিকিউরিটি কি এবং অথেনটিকেটর অ্যাপ চালু করার বিস্তারিত নির্দেশিকা।",
+    "tags": ["2fa", "authentication", "security", "passkeys", "passwords"]
+  },
+  {
+    "id": "section:how-enable-two-factor-authentication:how-it-works",
+    "type": "section",
+    "title": "অনলাইনে ২এফএ কীভাবে কাজ করে?",
+    "subtitle": "How Does 2FA Work Online?",
+    "parentTitle": "কীভাবে: দ্বি-স্তরীয় প্রমাণীকরণ (টু-ফ্যাক্টর অথেনটিকেশন) চালু করবেন",
+    "url": "/ssd/how-enable-two-factor-authentication/#how-does-2fa-work-online",
+    "keywords": ["২এফএ কাজ করার পদ্ধতি", "TOTP", "পুশ নোটিফিকেশন", "সিকিউরিটি কি", "USB কি", "এসএমএস কোড"],
+    "summary": "এসএমএস, টিওটিপি অথেনটিকেটর অ্যাপ, পুশ নোটিফিকেশন এবং সিকিউরিটি কি-র মাধ্যমে প্রমাণীকরণের বিভিন্ন পদ্ধতি।",
+    "tags": ["2fa", "how-it-works"]
+  },
+  {
+    "id": "section:how-enable-two-factor-authentication:why-turn-on",
+    "type": "section",
+    "title": "কেন আমি ২এফএ চালু করব?",
+    "subtitle": "Why Should I Turn On 2FA?",
+    "parentTitle": "কীভাবে: দ্বি-স্তরীয় প্রমাণীকরণ (টু-ফ্যাক্টর অথেনটিকেশন) চালু করবেন",
+    "url": "/ssd/how-enable-two-factor-authentication/#why-should-i-turn-on-2fa",
+    "keywords": ["২এফএ কেন দরকার", "অ্যাকাউন্ট নিরাপত্তা", "পাসওয়ার্ড ফাঁস", "ফিশিং প্রতিরোধ"],
+    "summary": "পাসওয়ার্ড ফাঁস ও সাইবার আক্রমণ থেকে অ্যাকাউন্ট রক্ষা এবং ফিশিং-প্রতিরোধী সুরক্ষায় ২এফএ-র গুরুত্ব।",
+    "tags": ["2fa", "security"]
+  },
+  {
+    "id": "section:how-enable-two-factor-authentication:downsides",
+    "type": "section",
+    "title": "২এফএ ব্যবহারের কি কোনো অসুবিধা আছে?",
+    "subtitle": "Are There Any Downsides to Using 2FA?",
+    "parentTitle": "কীভাবে: দ্বি-স্তরীয় প্রমাণীকরণ (টু-ফ্যাক্টর অথেনটিকেশন) চালু করবেন",
+    "url": "/ssd/how-enable-two-factor-authentication/#are-there-any-downsides-to-using-2fa",
+    "keywords": ["২এফএ অসুবিধা", "লকআউট", "রিকভারি কোড", "ব্যাকআপ কোড", "সিম সোয়াপিং", "SMS ঝুঁকি"],
+    "summary": "ডিভাইস হারানোর ঝুঁকি, রিকভারি কোডের ব্যবহার, এসএমএস ২এফএ-র দুর্বলতা ও সিম সোয়াপিং থেকে সুরক্ষার উপায়।",
+    "tags": ["2fa", "risks", "recovery"]
+  },
+  {
+    "id": "section:how-enable-two-factor-authentication:passkeys",
+    "type": "section",
+    "title": "পাসকি সম্পর্কে কী বলবেন?",
+    "subtitle": "What About Passkeys?",
+    "parentTitle": "কীভাবে: দ্বি-স্তরীয় প্রমাণীকরণ (টু-ফ্যাক্টর অথেনটিকেশন) চালু করবেন",
+    "url": "/ssd/how-enable-two-factor-authentication/#what-about-passkeys",
+    "keywords": ["পাসকি", "passkeys", "বায়োমেট্রিক", "পাসওয়ার্ডবিহীন লগইন", "ফিশিং প্রতিরোধ"],
+    "summary": "পাসকির কার্যপদ্ধতি, অন্তর্নির্মিত দ্বি-স্তরীয় নিরাপত্তা এবং পাসওয়ার্ড ও সাধারণ ২এফএ-র তুলনায় এর সুবিধা।",
+    "tags": ["passkeys", "authentication"]
+  },
+  {
+    "id": "section:how-enable-two-factor-authentication:enable",
+    "type": "section",
+    "title": "আমি কীভাবে ২এফএ চালু করব?",
+    "subtitle": "How Do I Turn On 2FA?",
+    "parentTitle": "কীভাবে: দ্বি-স্তরীয় প্রমাণীকরণ (টু-ফ্যাক্টর অথেনটিকেশন) চালু করবেন",
+    "url": "/ssd/how-enable-two-factor-authentication/#how-do-i-turn-on-2fa",
+    "keywords": ["২এফএ চালু করার নিয়ম", "2FA Directory", "ইমেইল নিরাপত্তা", "ক্লাউড ব্যাকআপ", "সোশ্যাল মিডিয়া"],
+    "summary": "ধাপে ধাপে ২এফএ পদ্ধতি বেছে নেওয়া, সেটআপ করা এবং ইমেইল ও গুরুত্বপূর্ণ অ্যাকাউন্টগুলোকে অগ্রাধিকার দিয়ে সুরক্ষিত করার পরামর্শ।",
+    "tags": ["how-to", "setup"]
+  },
+  {
     "id": "glossary:malware",
     "type": "glossary",
     "title": "ম্যালওয়্যার (malware)",
