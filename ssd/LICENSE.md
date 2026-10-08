@@ -6,4 +6,6 @@ These Bengali translations are adaptations of that text. They were made by trans
 
 The translations are also shared under CC BY 4.0. EFF has not endorsed or sponsored these translations.
 
+For the full legal code of the license, see [license-legalcode.txt](./license-legalcode.txt).
+
 Material not original to EFF (external quotes, trademarks, third-party assets) is not covered by this license. Check it before reusing it.

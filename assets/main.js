@@ -21,7 +21,7 @@ function initAnchors() {
   document.querySelectorAll(".heading-anchor").forEach(anchor => {
     anchor.addEventListener("click", () => {
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(window.location.origin + window.location.pathname + anchor.getAttribute("href")).catch(() => {});
+        navigator.clipboard.writeText(window.location.origin + window.location.pathname + anchor.getAttribute("href")).catch(() => { });
       }
     });
   });
@@ -62,7 +62,7 @@ function initGlossaryTooltips() {
         <svg class="glossary-tooltip-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
         </svg>
-        <span>শব্দার্থ</span>
+        <span>শব্দকোষ</span>
       </div>
       <div class="glossary-tooltip-body">${text}</div>
     `;
@@ -463,7 +463,7 @@ function initSearch() {
     const badgeLabels = {
       guide: "গাইড",
       section: "অনুচ্ছেদ",
-      glossary: "শব্দার্থ"
+      glossary: "শব্দকোষ"
     };
 
     resultsContainer.innerHTML = topResults.map(({ item }, index) => {
