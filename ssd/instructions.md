@@ -164,7 +164,7 @@ When converting an `index.md` to `index.html`:
 1. **Read `TEMPLATE.html`** — understand every section before writing a single line.
 2. **Read `index.md` in full** — understand all sections, callout types, images, and list structures.
 3. **Read `glossary.md`** — identify which terms in the article appear in the glossary and require `<abbr class="glossary-term">` markup.
-4. **Fill in all `{{PLACEHOLDERS}}`** in the template header: title, slug, description, dates, translator.
+4. **Fill in all `{{PLACEHOLDERS}}`** in the template header: title, slug, description, bilingual keywords, dates (ISO format for schema/OG), translator.
 5. **Convert the body** section by section, in order. For each element:
    - Match list type (ordered vs unordered) to the source.
    - Apply glossary markup to first occurrences.

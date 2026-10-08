@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://translation.samin-yasar.dev/ssd/</loc></url>
-  <url><loc>https://translation.samin-yasar.dev/ssd/how-avoid-phishing-attacks/</loc></url>
-  <url><loc>https://translation.samin-yasar.dev/ssd/how-to-delete-your-computers-data-securely/</loc></url>
-  <url><loc>https://translation.samin-yasar.dev/ssd/how-to-detect-bluetooth-trackers/</loc></url>
-  <url><loc>https://translation.samin-yasar.dev/ssd/how-to-enable-lockdown-mode-on-iphone/</loc></url>
-  <url><loc>https://translation.samin-yasar.dev/ssd/glossary/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://translation.samin-yasar.dev/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://translation.samin-yasar.dev/ssd/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://translation.samin-yasar.dev/ssd/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ssd.eff.org/" />
+  </url>
+  <url>
+    <loc>https://translation.samin-yasar.dev/ssd/how-avoid-phishing-attacks/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://translation.samin-yasar.dev/ssd/how-avoid-phishing-attacks/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ssd.eff.org/module/how-avoid-phishing-attacks" />
+  </url>
+  <url>
+    <loc>https://translation.samin-yasar.dev/ssd/how-to-delete-your-computers-data-securely/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://translation.samin-yasar.dev/ssd/how-to-delete-your-computers-data-securely/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ssd.eff.org/module/how-to-delete-your-computers-data-securely" />
+  </url>
+  <url>
+    <loc>https://translation.samin-yasar.dev/ssd/how-to-detect-bluetooth-trackers/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://translation.samin-yasar.dev/ssd/how-to-detect-bluetooth-trackers/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ssd.eff.org/module/how-to-detect-bluetooth-trackers" />
+  </url>
+  <url>
+    <loc>https://translation.samin-yasar.dev/ssd/how-to-enable-lockdown-mode-on-iphone/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://translation.samin-yasar.dev/ssd/how-to-enable-lockdown-mode-on-iphone/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ssd.eff.org/module/how-to-enable-lockdown-mode-on-iphone" />
+  </url>
+  <url>
+    <loc>https://translation.samin-yasar.dev/ssd/how-enable-two-factor-authentication/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://translation.samin-yasar.dev/ssd/how-enable-two-factor-authentication/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ssd.eff.org/module/how-enable-two-factor-authentication" />
+  </url>
+  <url>
+    <loc>https://translation.samin-yasar.dev/ssd/glossary/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://translation.samin-yasar.dev/ssd/glossary/" />
+  </url>
 </urlset>

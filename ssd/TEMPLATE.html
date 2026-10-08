@@ -14,20 +14,101 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta http-equiv="content-language" content="bn">
+
   <!-- TITLE: Bengali title of the guide followed by " — বাংলা অনুবাদ" -->
   <title>{{GUIDE_TITLE_BN}} — বাংলা অনুবাদ</title>
 
   <!-- DESCRIPTION: Short Bengali summary (~20 words) — used for SEO and social preview -->
-  <meta name="description" content="{{GUIDE_TITLE_BN}} — EFF Surveillance Self-Defense-এর স্বাধীন বাংলা অনুবাদ।">
+  <meta name="description" content="{{GUIDE_DESCRIPTION_BN}}">
+
+  <!-- KEYWORDS: Targeted bilingual SEO search keywords -->
+  <meta name="keywords" content="{{GUIDE_KEYWORDS}}">
+
+  <!-- AUTHOR & ROBOTS -->
+  <meta name="author" content="Electronic Frontier Foundation (EFF), অনুবাদক: {{TRANSLATOR_NAME}}">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
   <!-- CANONICAL: The live URL of this page on the Bengali translation site -->
   <link rel="canonical" href="https://translation.samin-yasar.dev/ssd/{{GUIDE_SLUG}}/">
 
-  <!-- ALTERNATE: Points to the original English source article on EFF SSD -->
+  <!-- ALTERNATE: Points to the Bengali and original English source articles -->
+  <link rel="alternate" hreflang="bn" href="https://translation.samin-yasar.dev/ssd/{{GUIDE_SLUG}}/">
   <link rel="alternate" hreflang="en" href="https://ssd.eff.org/module/{{GUIDE_SLUG}}">
 
   <!-- STYLESHEET: Site-wide stylesheet — do not change this path -->
   <link rel="stylesheet" href="/assets/style.css">
+
+  <!-- OPEN GRAPH / SOCIAL -->
+  <meta property="og:site_name" content="নজরদারি থেকে আত্মরক্ষা নির্দেশিকা">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{GUIDE_TITLE_BN}} — বাংলা অনুবাদ">
+  <meta property="og:description" content="{{GUIDE_DESCRIPTION_BN}}">
+  <meta property="og:url" content="https://translation.samin-yasar.dev/ssd/{{GUIDE_SLUG}}/">
+  <meta property="og:locale" content="bn_BD">
+  <meta property="article:published_time" content="{{DATE_EFF_ISO}}">
+  <meta property="article:modified_time" content="{{DATE_BN_ISO}}">
+  <meta property="article:author" content="Electronic Frontier Foundation (EFF)">
+  <meta property="article:section" content="Digital Security">
+
+  <!-- TWITTER CARDS -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{GUIDE_TITLE_BN}} — বাংলা অনুবাদ">
+  <meta name="twitter:description" content="{{GUIDE_DESCRIPTION_BN}}">
+
+  <!-- STRUCTURED DATA: Schema.org TechArticle & BreadcrumbList -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://translation.samin-yasar.dev/ssd/{{GUIDE_SLUG}}/#article",
+          "headline": "{{GUIDE_TITLE_BN}} — বাংলা অনুবাদ",
+          "name": "{{GUIDE_TITLE_BN}}",
+          "description": "{{GUIDE_DESCRIPTION_BN}}",
+          "inLanguage": "bn",
+          "mainEntityOfPage": "https://translation.samin-yasar.dev/ssd/{{GUIDE_SLUG}}/",
+          "url": "https://translation.samin-yasar.dev/ssd/{{GUIDE_SLUG}}/",
+          "datePublished": "{{DATE_EFF_ISO}}",
+          "dateModified": "{{DATE_BN_ISO}}",
+          "author": {
+            "@type": "Organization",
+            "name": "Electronic Frontier Foundation",
+            "url": "https://www.eff.org"
+          },
+          "translator": {
+            "@type": "Person",
+            "name": "{{TRANSLATOR_NAME}}"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "নজরদারি থেকে আত্মরক্ষা নির্দেশিকা",
+            "url": "https://translation.samin-yasar.dev/"
+          },
+          "isBasedOn": "https://ssd.eff.org/module/{{GUIDE_SLUG}}",
+          "keywords": "{{GUIDE_KEYWORDS}}"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "হোম",
+              "item": "https://translation.samin-yasar.dev/ssd/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "{{GUIDE_TITLE_BN}}",
+              "item": "https://translation.samin-yasar.dev/ssd/{{GUIDE_SLUG}}/"
+            }
+          ]
+        }
+      ]
+    }
+  </script>
 
   <!-- THEME INIT: Inline script to apply saved theme before first paint — do not modify -->
   <script>
