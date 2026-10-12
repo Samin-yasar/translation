@@ -2,6 +2,12 @@
 
 **সর্বশেষ পর্যালোচনা:** ৩ সেপ্টেম্বর, ২০২৪
 
+> **লাইসেন্স ও অ্যাট্রিবিউশন নোট**
+> এই লেখাটি Electronic Frontier Foundation (EFF)-এর Surveillance Self-Defense (SSD) প্রকল্পের "How to: Enable Lockdown Mode on iPhone" নিবন্ধের একটি বাংলা অনুবাদ। মূল নিবন্ধ: <https://ssd.eff.org/module/how-to-enable-lockdown-mode-on-iphone>
+> মূল লেখাটি [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) লাইসেন্সের অধীনে প্রকাশিত। এই অনুবাদও একই লাইসেন্সের অধীনে প্রকাশিত।
+> **অনুবাদকের নোট:** মূল ইংরেজি লেখা বাংলায় অনূদিত হয়েছে; ডিভাইসের মেনু ও বাটনের নাম অনুসরণ সহজ করতে ইংরেজিতেই রাখা হয়েছে। এই অনুবাদ EFF কর্তৃক অনুমোদিত বা সমর্থিত নয়।
+> অনুবাদক: সামিন ইয়াসার · অনুবাদের তারিখ: ০৫ অক্টোবর, ২০২৬
+
 ---
 
 ## লকডাউন মোড কী?
@@ -101,7 +107,7 @@
 
 এই লেখাটি ইলেকট্রনিক ফ্রন্টিয়ার ফাউন্ডেশন (Electronic Frontier Foundation, EFF)-এর *Surveillance Self-Defense (SSD)* প্রকল্পের "How to: Enable Lockdown Mode on iPhone" (সর্বশেষ পর্যালোচনা: সেপ্টেম্বর ৩, ২০২৪) নিবন্ধের একটি বাংলা অনুবাদ।
 
-- **মূল রচনা:** Electronic Frontier Foundation (EFF), Surveillance Self-Defense — https://ssd.eff.org
+- **মূল রচনা:** Electronic Frontier Foundation (EFF), Surveillance Self-Defense — [মূল নিবন্ধ](https://ssd.eff.org/module/how-to-enable-lockdown-mode-on-iphone)
 - **লাইসেন্স:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
-- **পরিবর্তন:** মূল ইংরেজি লেখাটি বাংলায় অনূদিত হয়েছে। ডিভাইসের মেনু ও বাটনের নাম অনুসরণ সহজ করতে ইংরেজিতেই রাখা হয়েছে।
+- **অনুবাদকের নোট:** মূল ইংরেজি লেখাটি বাংলায় অনূদিত হয়েছে। ডিভাইসের মেনু ও বাটনের নাম অনুসরণ সহজ করতে ইংরেজিতেই রাখা হয়েছে।
 - এই অনুবাদটি EFF কর্তৃক অনুমোদিত বা সমর্থিত নয়।
