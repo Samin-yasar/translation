@@ -5,13 +5,33 @@
 
 ---
 
+## How this project works (read first)
+
+The Bengali translation is written and finalized **by the human translator**. AI agents and scripts only help with HTML building. They never translate, rewrite, or improve Bengali text.
+
+The workflow for each guide is:
+
+1. The translator writes a **draft** translation in `index.md`.
+2. An agent converts the draft into `index.html` using `TEMPLATE.html` (new guides only).
+3. The translator checks the HTML **against the original English page** at ssd.eff.org, and fixes problems **by hand in the HTML**. This includes adding translator's notes.
+4. The checked, corrected `index.html` is the **published and final version**.
+
+### What this means for you
+
+- **`index.html` is the source of truth once it exists.** `index.md` is a draft and may be out of date. It does not override the HTML.
+- **Never regenerate, overwrite, or "sync" an existing `index.html` from `index.md`.** Doing so would erase the translator's manual corrections and translator's notes.
+- **Never edit existing Bengali text in `index.html`** unless the translator has explicitly asked for that specific change.
+- **If `index.md` and an existing `index.html` differ, do not resolve the difference yourself.** Report it to the translator and wait. The HTML is more likely to be correct.
+
+---
+
 ## Project Overview
 
 This project publishes Bengali translations of EFF Surveillance Self-Defense (SSD) guides at `translation.samin-yasar.dev`. Each guide lives in its own folder under `ssd/` and contains:
 
-- `index.md` — the **source of truth**: the finalized Bengali translation
-- `index.html` — the **rendered HTML output**, built from `index.md` using `TEMPLATE.html`
-- `media/` — local screenshots/images referenced from both files
+- `index.html` — the **final, published page**, checked and corrected by the translator
+- `index.md` — the translator's **draft**, used as the starting point for the first HTML build
+- `media/` — local screenshots/images referenced from the HTML
 
 The canonical HTML template is at `ssd/TEMPLATE.html`.
 The site stylesheet is at `assets/style.css`.
@@ -20,6 +40,8 @@ The site script is at `assets/main.js`.
 ---
 
 ## Section 1 — What You MUST Do
+
+*These rules apply when you build a **new** `index.html` from an `index.md` draft. They do not authorize changes to existing pages (see Section 3).*
 
 ### 1.1 Follow the template exactly
 
@@ -32,12 +54,13 @@ The site script is at `assets/main.js`.
   ```
 - `h4` headings do **not** get an anchor link.
 
-### 1.2 Reproduce translations faithfully from index.md
+### 1.2 Reproduce the draft faithfully
 
 - Copy all Bengali text **word for word** from `index.md`. Do not paraphrase, improve, shorten, or rewrite.
 - If `index.md` uses a numbered list, the HTML must use `<ol>`. If `index.md` uses a bullet list, use `<ul>`. Do not switch between them.
 - Section order in the HTML must match the section order in `index.md`.
 - If `index.md` has a horizontal rule (`---`), include an `<hr>` at the same position.
+- If you think the draft contains a mistake, **flag it in your report. Do not fix it.**
 
 ### 1.3 Preserve English UI labels exactly
 
@@ -64,6 +87,7 @@ The site script is at `assets/main.js`.
 - The tooltip text (`title`) must be written in Bengali.
 - The `<abbr>` must not be wrapped in an external link. The definition is delivered inline via the tooltip.
 - Only mark the **first occurrence** of a term per article unless the article is very long and the term appears again in a very different section.
+- These tooltip definitions are written by the translator and are not part of EFF's original text. Copy them exactly from Section 4.
 
 ### 1.6 Use the correct callout pattern
 
@@ -76,21 +100,27 @@ Map source callout types as follows:
 
 Use the exact SVG icons and `<div class="callout-label">` structure from `TEMPLATE.html`. Do not invent new callout types.
 
-### 1.7 Update the GitHub header link per guide
+### 1.7 Keep all non-glossary links from the source
+
+- Every external link in the original EFF page (for example Wikipedia, Apple or Microsoft support pages, vendor pages, other EFF guides) must be kept as a link in the Bengali text, pointing to the same destination.
+- If the draft is missing a link that is in the original, **flag it in your report**. Do not add or invent a link on your own.
+- Glossary terms are the only exception (see 2.1).
+
+### 1.8 Update the GitHub header link per guide
 
 - The `<a class="icon-link">` in the header must point to the specific guide's folder on GitHub:
   ```
   https://github.com/Samin-yasar/translation/tree/main/ssd/{{GUIDE_SLUG}}
   ```
 
-### 1.8 Include a Table of Contents only when appropriate
+### 1.9 Include a Table of Contents only when appropriate
 
 - Include a TOC (`<h2 id="table-of-contents">`) only if:
   - The source `index.md` contains an explicit table of contents, **or**
   - The article has four or more major `##` sections.
 - If a TOC is included, it must appear immediately after the `<hr>` that follows the license `<blockquote>`, before the article body.
 
-### 1.9 Keep the footer and script unchanged
+### 1.10 Keep the footer and script unchanged
 
 - The `<footer class="site-footer">` content and link structure must be identical across all guides.
 - The only script tag is `<script src="/assets/main.js"></script>` at the end of `<body>`. Do not add other scripts.
@@ -112,11 +142,12 @@ Use the exact SVG icons and `<div class="callout-label">` structure from `TEMPLA
 
 Reason: This is a Bengali-language guide. Sending readers to an English page breaks the language contract. Definitions belong in the inline tooltip.
 
-### 2.2 Do NOT change, rephrase, or "improve" translations from index.md
+### 2.2 Do NOT change, rephrase, or "improve" Bengali text
 
-- The translations in `index.md` are final. Do not alter phrasing, word choice, sentence structure, or punctuation.
-- Do not add explanatory content that is not in `index.md`.
-- Do not omit any content that is in `index.md`.
+- Do not alter phrasing, word choice, sentence structure, or punctuation, in either `index.md` or `index.html`.
+- Do not add explanatory content that the translator did not write.
+- Do not omit content that is in the draft or in the existing HTML.
+- Do not translate or retranslate anything yourself. If something looks wrong, report it.
 
 ### 2.3 Do NOT change the HTML design or layout
 
@@ -133,9 +164,12 @@ Reason: This is a Bengali-language guide. Sending readers to an English page bre
 
 ### 2.5 Do NOT add a TOC if index.md has none and the article has fewer than four sections
 
-### 2.6 Do NOT add translation notes, disclaimers, or commentary not in index.md
+### 2.6 Do NOT write, edit, move, or remove translator's notes
 
-- The only boilerplate text permitted is the license/attribution blockquote, which is fixed and standardised.
+- Translator's notes are written **by hand by the translator, directly in `index.html`**. They are not part of `index.md` and are not generated by agents.
+- When you touch a page that already contains a translator's note, leave it **exactly as it is**, character for character and in the same position.
+- Do not add translator's notes, disclaimers, commentary, or "helpful" explanations of your own.
+- The only boilerplate text permitted besides the translator's own notes is the license/attribution blockquote, which is fixed and standardised.
 
 ### 2.7 Do NOT change the `<title>` format
 
@@ -155,29 +189,48 @@ Anchor `id` attributes use the English slug (matching the guide folder name patt
 
 These are shared site-wide assets. Changes to them affect all guides. They are out of scope for per-guide work.
 
+### 2.11 Do NOT overwrite or regenerate an existing index.html
+
+- If `<guide-slug>/index.html` already exists, do not rebuild it from `index.md`, and do not replace it with a newly generated file.
+- Do not "sync" the HTML to match the draft, and do not "sync" the draft to match the HTML, unless the translator asks.
+
 ---
 
-## Section 3 — HTML Conversion Workflow
+## Section 3 — Workflows
 
-When converting an `index.md` to `index.html`:
+### 3A. Building a NEW guide page (no `index.html` exists yet)
 
 1. **Read `TEMPLATE.html`** — understand every section before writing a single line.
-2. **Read `index.md` in full** — understand all sections, callout types, images, and list structures.
+2. **Read `index.md` in full** — understand all sections, callout types, images, links, and list structures.
 3. **Read `glossary.md`** — identify which terms in the article appear in the glossary and require `<abbr class="glossary-term">` markup.
 4. **Fill in all `{{PLACEHOLDERS}}`** in the template header: title, slug, description, bilingual keywords, dates (ISO format for schema/OG), translator.
 5. **Convert the body** section by section, in order. For each element:
-   - Match list type (ordered vs unordered) to the source.
+   - Match list type (ordered vs unordered) to the draft.
+   - Keep every external link from the source (see 1.7).
    - Apply glossary markup to first occurrences.
-   - Apply callout markup where the source has blockquotes or warning/tip markers.
+   - Apply callout markup where the draft has blockquotes or warning/tip markers.
    - Use `<figure>/<figcaption>` for every image.
 6. **Update the search index**: Add the new guide and its key sections to `ssd/search-index.json`.
-7. **Verify** the rendered HTML against the source `index.md` — every sentence must be accounted for.
+7. **Verify** the rendered HTML against the draft `index.md`: every sentence must be accounted for.
+8. **Report to the translator**: list anything you could not do, anything that looks wrong in the draft, missing images, and missing links. The translator will check the page against the original English guide and correct it by hand.
+
+Do not describe a new page as "final". It is a first build until the translator has checked it.
+
+### 3B. Changing an EXISTING guide page (`index.html` already exists)
+
+The HTML is the source of truth. Work this way:
+
+1. **Read the existing `index.html`**, not just `index.md`.
+2. **Make only the change the translator asked for.** Keep the diff as small as possible.
+3. **Leave everything else untouched**, including translator's notes, glossary tooltips, links, and any text that looks different from `index.md`.
+4. **Do not touch `index.md`** unless the translator asks you to update the draft too.
+5. **Report differences** you noticed between `index.md` and `index.html`. Do not fix them.
 
 ---
 
 ## Section 4 — Glossary Term Handling Reference
 
-The `title` attribute on `<abbr class="glossary-term">` must contain the **Bengali definition** written for a non-technical reader. Copy from the table below — do not write a new definition unless the term is not listed here.
+The `title` attribute on `<abbr class="glossary-term">` must contain the **Bengali definition** written for a non-technical reader. Copy from the table below — do not write a new definition unless the term is not listed here. If a term is not listed, flag it in your report instead of inventing a definition.
 
 | Term (EN) | Term (BN) | Bengali tooltip (copy exactly) |
 |---|---|---|
@@ -195,8 +248,9 @@ The `title` attribute on `<abbr class="glossary-term">` must contain the **Benga
 | cell site simulator | সেল সাইট সিমুলেটর | এমন একটি যন্ত্র যা মোবাইল টাওয়ারের ভান করে কাছাকাছি সব ফোনকে নিজের সাথে যুক্ত করিয়ে নেয়। এভাবে পুলিশ বা নিরাপত্তা সংস্থা কোনো এলাকার ফোনগুলোর অবস্থান বা কল শনাক্ত করতে পারে। |
 | configuration profile | কনফিগারেশন প্রোফাইল | কোনো প্রতিষ্ঠান (যেমন স্কুল বা কর্মক্ষেত্র) আপনার ডিভাইসে ইনস্টল করা একটি ফাইল, যা ডিভাইসের কিছু সেটিংস নিয়ন্ত্রণ করতে পারে। |
 
-For a complete list with all terms, see [`ssd/glossary.md`](../glossary.md) and [`ssd/glossary/index.html`](../glossary/index.html).
+This table must stay in sync with `ssd/glossary.md` and `ssd/glossary/index.html`. If they differ, report it. Do not decide which one is correct.
 
+For a complete list with all terms, see [`ssd/glossary.md`](../glossary.md) and [`ssd/glossary/index.html`](../glossary/index.html).
 
 ---
 
@@ -212,8 +266,8 @@ ssd/
 ├── style-guide.md         ← translation writing style guidelines
 ├── index.html             ← guide index/listing page
 └── {{guide-slug}}/
-    ├── index.md           ← source of truth (Bengali translation)
-    ├── index.html         ← rendered HTML output
+    ├── index.html         ← FINAL published page (source of truth once it exists)
+    ├── index.md           ← translator's DRAFT, may be out of date
     └── media/             ← local images only
         └── *.jpeg / *.png
 ```
@@ -231,3 +285,5 @@ If a new article introduces a technical term not yet in `glossary.md`:
 3. Add the glossary entry to `ssd/search-index.json`.
 4. If the term belongs in the "মনে রাখবেন" quick-reference table, add it there too.
 5. Use the agreed Bengali rendering **consistently** across all articles — do not invent a different translation for the same term in a different guide.
+
+Do these only when the translator has asked for the new term to be added. The Bengali rendering and the tooltip definition come from the translator, not from you.
