@@ -494,6 +494,136 @@ article blockquote {
   color: var(--muted);
 }
 
+/* Tables */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.8rem 0 2.2rem;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+:root[data-theme="dark"] .table-wrap {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+article table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+/* Standalone article table fallback if not wrapped in .table-wrap */
+article > table {
+  margin: 1.8rem 0 2.2rem;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+article thead {
+  background: var(--surface-alt);
+}
+
+article th {
+  padding: 0.9rem 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+  border-bottom: 2px solid var(--rule);
+  vertical-align: middle;
+}
+
+article td {
+  padding: 0.8rem 1.1rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--text);
+  vertical-align: middle;
+  transition: background-color 0.15s ease;
+}
+
+/* Vertical borders between columns */
+article th:not(:last-child),
+article td:not(:last-child) {
+  border-right: 1px solid var(--rule);
+}
+
+/* Remove bottom border on the last row */
+article tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Rounded corners for outer table edges inside wrapper */
+.table-wrap thead tr:first-child th:first-child,
+article > table thead tr:first-child th:first-child {
+  border-top-left-radius: 11px;
+}
+
+.table-wrap thead tr:first-child th:last-child,
+article > table thead tr:first-child th:last-child {
+  border-top-right-radius: 11px;
+}
+
+.table-wrap tbody tr:last-child td:first-child,
+article > table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 11px;
+}
+
+.table-wrap tbody tr:last-child td:last-child,
+article > table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 11px;
+}
+
+/* Subtle zebra striping for rows */
+article tbody tr:nth-child(even) td {
+  background-color: var(--surface-alt);
+}
+
+/* Row hover highlight */
+article tbody tr:hover td {
+  background-color: var(--accent-soft);
+}
+
+/* First column (Data Type) */
+article th:first-child,
+article td:first-child {
+  text-align: left;
+}
+
+/* Status / tick columns: centered headers and tick cells */
+article th:nth-child(2),
+article td:nth-child(2),
+article th:nth-child(3),
+article td:nth-child(3) {
+  text-align: center;
+  vertical-align: middle;
+  width: 25%;
+  min-width: 140px;
+}
+
+/* Centrally aligned tick icon */
+.table-tick,
+.tick-cell {
+  text-align: center;
+}
+
+.table-tick {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+
+
 /* Callout boxes — EFF SSD-style warning and tip paragraphs */
 .callout {
   margin: 1.4rem 0;
