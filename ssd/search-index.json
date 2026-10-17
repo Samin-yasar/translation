@@ -237,6 +237,60 @@
     "tags": ["how-to", "setup"]
   },
   {
+    "id": "guide:how-encrypt-your-iphone",
+    "type": "guide",
+    "title": "কীভাবে: আপনার আইফোন এনক্রিপ্ট করবেন",
+    "subtitle": "How to: Encrypt Your iPhone",
+    "url": "/ssd/how-encrypt-your-iphone/",
+    "keywords": ["আইফোন এনক্রিপশন", "iPhone encryption", "অ্যাডভান্সড ডেটা প্রোটেকশন", "Advanced Data Protection", "ADP", "iCloud", "আইক্লাউড", "স্ট্যান্ডার্ড ডেটা প্রোটেকশন", "পাসকোড", "রিকভারি কি", "রিকভারি কন্ট্যাক্ট", "অ্যাপল আইডি", "এন্ড-টু-এন্ড এনক্রিপশন"],
+    "summary": "আইফোনে ডেটা এনক্রিপশন, পাসকোড সুরক্ষা এবং iCloud-এর অ্যাডভান্সড ডেটা প্রোটেকশন (ADP) সক্রিয় করার সম্পূর্ণ নির্দেশিকা।",
+    "tags": ["iphone", "encryption", "apple", "adp", "icloud", "privacy"]
+  },
+  {
+    "id": "section:how-encrypt-your-iphone:on-device",
+    "type": "section",
+    "title": "ডিভাইসে ডেটা কীভাবে এনক্রিপ্ট করা হয়",
+    "subtitle": "How Data is Encrypted on Device",
+    "parentTitle": "কীভাবে: আপনার আইফোন এনক্রিপ্ট করবেন",
+    "url": "/ssd/how-encrypt-your-iphone/#how-data-is-encrypted-on-device",
+    "keywords": ["ডিভাইস এনক্রিপশন", "পাসকোড", "Face ID", "Touch ID", "বায়োমেট্রিক", "পঞ্চম সংশোধনী", "আইনি সুরক্ষা"],
+    "summary": "আইফোনে পাসকোডের মাধ্যমে ডেটা এনক্রিপশন, বায়োমেট্রিক বনাম পাসকোডের আইনি পার্থক্য এবং সাময়িক Face ID নিষ্ক্রিয় করার কৌশল।",
+    "tags": ["encryption", "passcode", "biometrics"]
+  },
+  {
+    "id": "section:how-encrypt-your-iphone:icloud",
+    "type": "section",
+    "title": "iCloud-এর ডেটা কীভাবে এনক্রিপ্ট করা হয়",
+    "subtitle": "How iCloud Data Is Encrypted",
+    "parentTitle": "কীভাবে: আপনার আইফোন এনক্রিপ্ট করবেন",
+    "url": "/ssd/how-encrypt-your-iphone/#how-icloud-data-is-encrypted",
+    "keywords": ["iCloud এনক্রিপশন", "Standard Data Protection", "স্ট্যান্ডার্ড ডেটা", "অ্যাডভান্সড ডেটা প্রোটেকশন", "Advanced Data Protection", "ক্লাউড ব্যাকআপ", "এন্ড-টু-এন্ড এনক্রিপশন"],
+    "summary": "iCloud-এ স্ট্যান্ডার্ড ডেটা প্রোটেকশন ও অ্যাডভান্সড ডেটা প্রোটেকশনের পার্থক্য এবং কোন ডেটা এন্ড-টু-এন্ড এনক্রিপ্টেড থাকে তার তালিকা।",
+    "tags": ["icloud", "adp", "backup"]
+  },
+  {
+    "id": "section:how-encrypt-your-iphone:sharing",
+    "type": "section",
+    "title": "শেয়ার বা সহযোগিতামূলক কাজের সময় ডেটা কীভাবে সুরক্ষিত থাকে",
+    "subtitle": "How Data is Secured When Sharing or Collaborating",
+    "parentTitle": "কীভাবে: আপনার আইফোন এনক্রিপ্ট করবেন",
+    "url": "/ssd/how-encrypt-your-iphone/#how-data-is-secured-when-sharing-or-collaborating",
+    "keywords": ["শেয়ারিং", "সহযোগিতা", "iCloud Drive", "শেয়ার্ড অ্যালবাম", "iWork", "পাবলিক লিংক"],
+    "summary": "iCloud ফাইল বা ফটো শেয়ারিংয়ের ক্ষেত্রে এন্ড-টু-এন্ড এনক্রিপশন বজায় থাকার শর্ত ও সীমাবদ্ধতা।",
+    "tags": ["sharing", "collaboration", "icloud"]
+  },
+  {
+    "id": "section:how-encrypt-your-iphone:enable-adp",
+    "type": "section",
+    "title": "অ্যাডভান্সড ডেটা প্রোটেকশন কীভাবে চালু করবেন",
+    "subtitle": "How to Enable Advanced Data Protection",
+    "parentTitle": "কীভাবে: আপনার আইফোন এনক্রিপ্ট করবেন",
+    "url": "/ssd/how-encrypt-your-iphone/#how-to-enable-advanced-data-protection",
+    "keywords": ["ADP চালু করার নিয়ম", "রিকভারি কন্ট্যাক্ট", "রিকভারি কী", "পুরোনো ডিভাইস", "Family Sharing"],
+    "summary": "আইফোন, আইপ্যাড ও ম্যাক থেকে ধাপে ধাপে অ্যাডভান্সড ডেটা প্রোটেকশন চালু করা, অ্যাকাউন্ট রিকভারি সেটআপ এবং পুরোনো ডিভাইসের সমস্যা সমাধান।",
+    "tags": ["how-to", "setup", "adp", "recovery"]
+  },
+  {
     "id": "glossary:malware",
     "type": "glossary",
     "title": "ম্যালওয়্যার (malware)",
